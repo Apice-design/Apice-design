@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ápice — Sites profissionais para o seu negócio</title>
+<meta name='impact-site-verification' value='868d65a4-f1a1-4ee7-82f4-687dce657c0d'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #1B2420;
+    --parchment: #EDE6D6;
+    --amber: #C99A3B;
+    --sage: #7C8B7A;
+    --bone: #F6F2E9;
+    --ink-soft: #2A362F;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  h1,h2,h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  a{ color: inherit; text-decoration:none; }
+  .wrap{ max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  /* NAV */
+  nav{
+    display:flex; justify-content:space-between; align-items:center;
+    padding: 28px 0;
+  }
+  .logo{ font-family:'Fraunces', serif; font-size: 1.4rem; font-weight:600; }
+  .nav-links{ display:flex; gap: 32px; font-size: 0.92rem; }
+  .nav-links a{ opacity: 0.8; transition: opacity 0.2s; }
+  .nav-links a:hover{ opacity: 1; }
+
+  /* HERO */
+  .hero{
+    position: relative;
+    padding: 90px 0 140px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero h1{
+    font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+    line-height: 1.08;
+    max-width: 11.5em;
+  }
+  .hero p{
+    margin-top: 24px;
+    font-size: 1.1rem;
+    color: var(--sage);
+    max-width: 34ch;
+  }
+  .hero-ctas{
+    margin-top: 36px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .btn{
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn-primary{
+    background: var(--amber);
+    color: var(--ink);
+  }
+  .btn-primary:hover{ transform: translateY(-2px); }
+  .btn-ghost{
+    border: 1px solid rgba(237,230,214,0.3);
+  }
+  .btn-ghost:hover{ border-color: var(--amber); }
+
+  .topo{
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 620px;
+    height: 620px;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  /* COMO FUNCIONA */
+  section{ padding: 90px 0; }
+  .section-label{
+    font-size: 0.85rem;
+    color: var(--amber);
+    margin-bottom: 12px;
+  }
+  .section-title{
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
+    max-width: 16ch;
+    margin-bottom: 56px;
+  }
+  .steps{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+  .step{
+    border-top: 1px solid rgba(237,230,214,0.2);
+    padding-top: 20px;
+  }
+  .step .num{
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    color: var(--amber);
+    display: block;
+    margin-bottom: 14px;
+  }
+  .step h3{ font-size: 1.05rem; margin-bottom: 8px; }
+  .step p{ font-size: 0.92rem; color: var(--sage); }
+
+  /* PARA QUEM */
+  .servicos{
+    background: var(--bone);
+    color: var(--ink);
+  }
+  .servicos .section-label{ color: #A87A28; }
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .card{
+    background: #fff;
+    padding: 32px 28px;
+    border: 1px solid rgba(27,36,32,0.08);
+  }
+  .card .price{
+    font-family: 'Fraunces', serif;
+    font-size: 1.9rem;
+    margin: 14px 0 10px;
+  }
+  .card p{ font-size: 0.92rem; color: #4C564E; }
+  .card ul{ margin-top: 16px; padding-left: 18px; font-size: 0.9rem; color: #4C564E; }
+  .card li{ margin-bottom: 6px; }
+
+  /* EXEMPLO */
+  .exemplo-tag{
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border: 1px solid var(--sage);
+    color: var(--sage);
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  .exemplo-box{
+    border: 1px solid rgba(237,230,214,0.2);
+    padding: 48px;
+    text-align: center;
+    color: var(--sage);
+    font-size: 0.95rem;
+  }
+
+  /* CTA FINAL */
+  .cta-final{
+    text-align: left;
+    border-top: 1px solid rgba(237,230,214,0.15);
+  }
+  .cta-final h2{
+    font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+    max-width: 14ch;
+    margin-bottom: 20px;
+  }
+  .contact-line{
+    margin-top: 32px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    font-size: 0.98rem;
+  }
+  .contact-line a{ color: var(--amber); }
+
+  footer{
+    padding: 32px 0;
+    font-size: 0.85rem;
+    color: var(--sage);
+    border-top: 1px solid rgba(237,230,214,0.1);
+  }
+
+  @media (max-width: 800px){
+    .hero{ grid-template-columns: 1fr; padding-top: 50px; }
+    .topo{ position: static; transform:none; width:100%; height:auto; margin-top: 20px; opacity: 0.6; }
+    .steps{ grid-template-columns: 1fr 1fr; }
+    .cards{ grid-template-columns: 1fr; }
+    .nav-links{ display:none; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .btn-primary:hover{ transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <div class="logo">Ápice</div>
+    <div class="nav-links">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+</div>
+
+<div class="wrap hero">
+  <div>
+    <h1>Seu negócio no digital, sem complicação.</h1>
+    <p>Criamos sites profissionais para donos de negócio que querem ser encontrados online — sem jargão técnico e sem dor de cabeça.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#contato">Quero meu site</a>
+      <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
+    </div>
+  </div>
+  <svg class="topo" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#C99A3B" stroke-width="1">
+      <ellipse cx="230" cy="230" rx="150" ry="120" opacity="0.15"/>
+      <ellipse cx="230" cy="230" rx="120" ry="95" opacity="0.25"/>
+      <ellipse cx="230" cy="230" rx="90" ry="72" opacity="0.35"/>
+      <ellipse cx="230" cy="230" rx="62" ry="50" opacity="0.5"/>
+      <ellipse cx="230" cy="230" rx="35" ry="28" opacity="0.7"/>
+    </g>
+    <circle cx="230" cy="230" r="4" fill="#C99A3B"/>
+  </svg>
+</div>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <div class="section-label">Processo</div>
+    <h2 class="section-title">Do primeiro contato ao site no ar</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Conversa inicial</h3>
+        <p>Entendemos o seu negócio, o público e o que você precisa mostrar.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Criação</h3>
+        <p>Montamos o site com identidade visual e conteúdo pensados pra você.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>Ajustes</h3>
+        <p>Você revisa, pedimos os ajustes que fizerem sentido.</p>
+      </div>
+      <div class="step">
+        <span class="num">04</span>
+        <h3>Site no ar</h3>
+        <p>Publicamos e explicamos como manter tudo funcionando.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="servicos" class="servicos">
+  <div class="wrap">
+    <div class="section-label">Serviços</div>
+    <h2 class="section-title">Para quem já tem um negócio e precisa de presença online</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Site institucional</h3>
+        <div class="price">Sob consulta</div>
+        <p>Ideal pra apresentar o negócio, serviços e forma de contato.</p>
+        <ul>
+          <li>Até 5 seções</li>
+          <li>Otimizado pra celular</li>
+          <li>Formulário de contato</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Atualização de site existente</h3>
+        <div class="price">Sob consulta</div>
+        <p>Pra quem já tem site, mas está desatualizado ou difícil de mexer.</p>
+        <ul>
+          <li>Revisão de conteúdo</li>
+          <li>Novo visual</li>
+          <li>Correção de informações</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Perfil no Google Maps</h3>
+        <div class="price">Sob consulta</div>
+        <p>Cardápio, fotos, horários e links de delivery atualizados.</p>
+        <ul>
+          <li>Correção de dados</li>
+          <li>Fotos atuais</li>
+          <li>Links úteis</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="section-label">Trabalhos</div>
+    <h2 class="section-title">Exemplos</h2>
+    <span class="exemplo-tag">Em construção</span>
+    <div class="exemplo-box">
+      Os primeiros projetos entram aqui assim que forem publicados.
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="cta-final">
+  <div class="wrap">
+    <h2>Vamos colocar seu negócio no digital?</h2>
+    <p style="color:var(--sage); max-width:40ch;">Fale direto comigo — sem formulário longo, sem enrolação.</p>
+    <div class="contact-line">
+      <a href="https://wa.me/5528999770520" target="_blank">WhatsApp: (28) 99977-0520</a>
+      <a href="mailto:marchioriheitor6@gmail.com">marchioriheitor6@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Ápice — sites e presença digital para negócios locais.
+  </div>
+</footer>
+
+</body>
+</html>
