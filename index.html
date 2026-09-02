@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -34,7 +33,7 @@
   }
   a{ color: inherit; text-decoration:none; }
   .wrap{ max-width: 1100px; margin: 0 auto; padding: 0 32px; }
- 
+
   /* NAV */
   nav{
     display:flex; justify-content:space-between; align-items:center;
@@ -44,7 +43,7 @@
   .nav-links{ display:flex; gap: 32px; font-size: 0.92rem; }
   .nav-links a{ opacity: 0.8; transition: opacity 0.2s; }
   .nav-links a:hover{ opacity: 1; }
- 
+
   /* HERO */
   .hero{
     position: relative;
@@ -88,7 +87,7 @@
     border: 1px solid rgba(237,230,214,0.3);
   }
   .btn-ghost:hover{ border-color: var(--amber); }
- 
+
   .topo{
     position: absolute;
     right: -60px;
@@ -99,7 +98,7 @@
     opacity: 0.9;
     pointer-events: none;
   }
- 
+
   /* COMO FUNCIONA */
   section{ padding: 90px 0; }
   .section-label{
@@ -130,7 +129,7 @@
   }
   .step h3{ font-size: 1.05rem; margin-bottom: 8px; }
   .step p{ font-size: 0.92rem; color: var(--sage); }
- 
+
   /* PARA QUEM */
   .servicos{
     background: var(--bone);
@@ -155,7 +154,7 @@
   .card p{ font-size: 0.92rem; color: #4C564E; }
   .card ul{ margin-top: 16px; padding-left: 18px; font-size: 0.9rem; color: #4C564E; }
   .card li{ margin-bottom: 6px; }
- 
+
   /* EXEMPLO */
   .exemplo-tag{
     display: inline-block;
@@ -173,7 +172,7 @@
     color: var(--sage);
     font-size: 0.95rem;
   }
- 
+
   /* CTA FINAL */
   .cta-final{
     text-align: left;
@@ -192,14 +191,14 @@
     font-size: 0.98rem;
   }
   .contact-line a{ color: var(--amber); }
- 
+
   footer{
     padding: 32px 0;
     font-size: 0.85rem;
     color: var(--sage);
     border-top: 1px solid rgba(237,230,214,0.1);
   }
- 
+
   @media (max-width: 800px){
     .hero{ grid-template-columns: 1fr; padding-top: 50px; }
     .topo{ position: static; transform:none; width:100%; height:auto; margin-top: 20px; opacity: 0.6; }
@@ -207,26 +206,25 @@
     .cards{ grid-template-columns: 1fr; }
     .nav-links{ display:none; }
   }
- 
+
   @media (prefers-reduced-motion: reduce){
     .btn-primary:hover{ transform:none; }
   }
 </style>
 </head>
 <body>
- 
+
 <div class="wrap">
   <nav>
     <div class="logo">Ápice</div>
     <div class="nav-links">
       <a href="#como-funciona">Como funciona</a>
       <a href="#servicos">Serviços</a>
-      <a href="dicas-site-para-seu-negocio.html">Blog</a>
       <a href="#contato">Contato</a>
     </div>
   </nav>
 </div>
- 
+
 <div class="wrap hero">
   <div>
     <h1>Seu negócio no digital, sem complicação.</h1>
@@ -247,7 +245,7 @@
     <circle cx="230" cy="230" r="4" fill="#C99A3B"/>
   </svg>
 </div>
- 
+
 <section id="como-funciona">
   <div class="wrap">
     <div class="section-label">Processo</div>
@@ -276,7 +274,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="servicos" class="servicos">
   <div class="wrap">
     <div class="section-label">Serviços</div>
@@ -315,26 +313,32 @@
     </div>
   </div>
 </section>
- 
+
 <section id="portfolio">
   <div class="wrap">
     <div class="section-label">Trabalhos</div>
-    <h2 class="section-title">Exemplos de conceito</h2>
-    <div class="cards" style="grid-template-columns: repeat(2, 1fr);">
-      <div class="card" style="background: var(--ink-soft); border-color: rgba(237,230,214,0.12);">
-        <span class="exemplo-tag">Conceito</span>
-        <h3 style="color: var(--parchment); margin-top:14px;">Clínica odontológica</h3>
-        <p style="color: var(--sage);">Proposta de site institucional para consultório: apresentação, especialidades, formulário de agendamento e localização.</p>
+    <h2 class="section-title">Transformações</h2>
+    <div style="display:flex; flex-direction:column; gap:28px;">
+      <div style="border-radius:6px; overflow:hidden; border:1px solid rgba(237,230,214,0.12); position:relative;">
+        <img src="img/clinica-antes-depois.png" alt="Transformação de site para clínica odontológica" style="width:100%; display:block;">
+        <span style="position:absolute; bottom:12px; right:12px; font-size:0.7rem; color:var(--sage); background:rgba(27,36,32,0.75); padding:3px 8px; border-radius:3px;">Projeto demonstrativo</span>
       </div>
-      <div class="card" style="background: var(--ink-soft); border-color: rgba(237,230,214,0.12);">
-        <span class="exemplo-tag">Conceito</span>
-        <h3 style="color: var(--parchment); margin-top:14px;">Pousada / hospedagem</h3>
-        <p style="color: var(--sage);">Proposta de site para pequena hospedagem: fotos dos quartos, tabela de diárias e contato direto via WhatsApp.</p>
+      <div style="border-radius:6px; overflow:hidden; border:1px solid rgba(237,230,214,0.12); position:relative;">
+        <img src="img/pousada-antes-depois.png" alt="Transformação de site para pousada" style="width:100%; display:block;">
+        <span style="position:absolute; bottom:12px; right:12px; font-size:0.7rem; color:var(--sage); background:rgba(27,36,32,0.75); padding:3px 8px; border-radius:3px;">Projeto demonstrativo</span>
       </div>
     </div>
   </div>
 </section>
- 
+
+<section id="sobre">
+  <div class="wrap">
+    <div class="section-label">Sobre</div>
+    <h2 class="section-title">Foco total em criação de sites</h2>
+    <p style="max-width:60ch; color:var(--sage); font-size:1rem;">A Ápice se dedica exclusivamente a criar e atualizar sites para negócios locais — sem distrações, sem pacotes genéricos. Cada projeto é construído do zero, pensado pro tipo de cliente que aquele negócio realmente atende.</p>
+  </div>
+</section>
+
 <section id="contato" class="cta-final">
   <div class="wrap">
     <h2>Vamos colocar seu negócio no digital?</h2>
@@ -345,7 +349,7 @@
     </div>
   </div>
 </section>
- 
+
 <section id="notas" style="background: var(--bone); color: var(--ink);">
   <div class="wrap">
     <div class="section-label" style="color:#A87A28;">Nota</div>
@@ -363,13 +367,12 @@
     </div>
   </div>
 </section>
- 
+
 <footer>
   <div class="wrap">
     Ápice — sites e presença digital para negócios locais.
   </div>
 </footer>
- 
+
 </body>
 </html>
- 
