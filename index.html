@@ -3,19 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ápice — Sites profissionais para o seu negócio</title>
+<title>Ápice — Criação de sites profissionais</title>
 <meta name='impact-site-verification' value='828f4e5a-89b1-4580-aed8-f99e3f89ea7b'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink: #1B2420;
+    --ink: #161F1B;
+    --ink-soft: #202B25;
     --parchment: #EDE6D6;
     --amber: #C99A3B;
+    --rust: #B5563A;
     --sage: #7C8B7A;
     --bone: #F6F2E9;
-    --ink-soft: #2A362F;
+    --bone-deep: #EDE4D3;
   }
   *{ margin:0; padding:0; box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
@@ -34,7 +36,6 @@
   a{ color: inherit; text-decoration:none; }
   .wrap{ max-width: 1100px; margin: 0 auto; padding: 0 32px; }
 
-  /* NAV */
   nav{
     display:flex; justify-content:space-between; align-items:center;
     padding: 28px 0;
@@ -44,7 +45,6 @@
   .nav-links a{ opacity: 0.8; transition: opacity 0.2s; }
   .nav-links a:hover{ opacity: 1; }
 
-  /* HERO */
   .hero{
     position: relative;
     padding: 90px 0 140px;
@@ -99,85 +99,93 @@
     pointer-events: none;
   }
 
-  /* COMO FUNCIONA */
-  section{ padding: 90px 0; }
+  section{ padding: 100px 0; }
+  .divider{
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(237,230,214,0.15), transparent);
+  }
   .section-label{
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--amber);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    font-weight: 600;
   }
   .section-title{
-    font-size: clamp(1.8rem, 3vw, 2.3rem);
-    max-width: 16ch;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    max-width: 20ch;
+    margin-bottom: 20px;
+  }
+  .section-intro{
+    color: var(--sage);
+    max-width: 56ch;
+    font-size: 1rem;
     margin-bottom: 56px;
   }
+
+  .processo{ background: var(--ink-soft); }
   .steps{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 28px;
   }
   .step{
-    border-top: 1px solid rgba(237,230,214,0.2);
-    padding-top: 20px;
+    border-top: 2px solid var(--amber);
+    padding-top: 22px;
   }
   .step .num{
     font-family: 'Fraunces', serif;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: var(--amber);
     display: block;
     margin-bottom: 14px;
   }
-  .step h3{ font-size: 1.05rem; margin-bottom: 8px; }
-  .step p{ font-size: 0.92rem; color: var(--sage); }
+  .step h3{ font-size: 1.08rem; margin-bottom: 10px; }
+  .step p{ font-size: 0.92rem; color: var(--sage); line-height: 1.65; }
 
-  /* PARA QUEM */
   .servicos{
     background: var(--bone);
     color: var(--ink);
   }
-  .servicos .section-label{ color: #A87A28; }
+  .servicos .section-label{ color: var(--rust); }
+  .servicos .section-intro{ color: #5B6459; }
   .cards{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
   .card{
     background: #fff;
-    padding: 32px 28px;
+    padding: 36px 32px;
     border: 1px solid rgba(27,36,32,0.08);
+    border-left: 3px solid var(--rust);
   }
-  .card .price{
-    font-family: 'Fraunces', serif;
-    font-size: 1.9rem;
-    margin: 14px 0 10px;
-  }
-  .card p{ font-size: 0.92rem; color: #4C564E; }
-  .card ul{ margin-top: 16px; padding-left: 18px; font-size: 0.9rem; color: #4C564E; }
-  .card li{ margin-bottom: 6px; }
+  .card h3{ font-size: 1.2rem; margin-bottom: 12px; }
+  .card p{ font-size: 0.95rem; color: #4C564E; margin-bottom: 16px; }
+  .card ul{ padding-left: 18px; font-size: 0.9rem; color: #4C564E; }
+  .card li{ margin-bottom: 7px; }
 
-  /* EXEMPLO */
-  .exemplo-tag{
-    display: inline-block;
-    font-size: 0.75rem;
-    padding: 4px 10px;
-    border: 1px solid var(--sage);
-    color: var(--sage);
-    border-radius: 20px;
-    margin-bottom: 18px;
+  .portfolio-item{
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(237,230,214,0.12);
+    position: relative;
+    margin-bottom: 28px;
   }
-  .exemplo-box{
-    border: 1px solid rgba(237,230,214,0.2);
-    padding: 48px;
-    text-align: center;
-    color: var(--sage);
-    font-size: 0.95rem;
+  .portfolio-item img{ width:100%; display:block; }
+  .demo-tag{
+    position:absolute; bottom:12px; right:12px;
+    font-size:0.6rem; color:var(--sage);
+    background:rgba(22,31,27,0.55); padding:2px 6px;
+    border-radius:3px; opacity:0.8;
   }
 
-  /* CTA FINAL */
-  .cta-final{
-    text-align: left;
-    border-top: 1px solid rgba(237,230,214,0.15);
-  }
+  .sobre{ background: var(--bone-deep); color: var(--ink); }
+  .sobre .section-label{ color: var(--rust); }
+  .sobre p{ color: #4C564E; max-width: 62ch; font-size: 1.02rem; }
+
+  .cta-final{ border-top: 1px solid rgba(237,230,214,0.15); }
   .cta-final h2{
     font-size: clamp(1.9rem, 3.5vw, 2.6rem);
     max-width: 14ch;
@@ -218,7 +226,7 @@
   <nav>
     <div class="logo">Ápice</div>
     <div class="nav-links">
-      <a href="#como-funciona">Como funciona</a>
+      <a href="#processo">Processo</a>
       <a href="#servicos">Serviços</a>
       <a href="dicas-site-para-seu-negocio.html">Blog</a>
       <a href="#contato">Contato</a>
@@ -229,10 +237,10 @@
 <div class="wrap hero">
   <div>
     <h1>Seu negócio no digital, sem complicação.</h1>
-    <p>Criamos sites profissionais para donos de negócio que querem ser encontrados online — sem jargão técnico e sem dor de cabeça.</p>
+    <p>Criação de sites profissionais para negócios que querem ser encontrados online — sem jargão técnico e sem dor de cabeça.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="#contato">Quero meu site</a>
-      <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
+      <a class="btn btn-ghost" href="#processo">Ver o processo</a>
     </div>
   </div>
   <svg class="topo" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
@@ -247,30 +255,33 @@
   </svg>
 </div>
 
-<section id="como-funciona">
+<div class="divider"></div>
+
+<section id="processo" class="processo">
   <div class="wrap">
     <div class="section-label">Processo</div>
-    <h2 class="section-title">Do primeiro contato ao site no ar</h2>
+    <h2 class="section-title">Como o projeto é conduzido, do início à publicação</h2>
+    <p class="section-intro">Um processo estruturado em quatro etapas, pensado pra você acompanhar cada decisão sem precisar entender de programação ou design.</p>
     <div class="steps">
       <div class="step">
         <span class="num">01</span>
-        <h3>Conversa inicial</h3>
-        <p>Entendemos o seu negócio, o público e o que você precisa mostrar.</p>
+        <h3>Levantamento</h3>
+        <p>Conversa inicial pra entender o negócio, o público-alvo e o que o site precisa comunicar antes de qualquer linha ser escrita.</p>
       </div>
       <div class="step">
         <span class="num">02</span>
-        <h3>Criação</h3>
-        <p>Montamos o site com identidade visual e conteúdo pensados pra você.</p>
+        <h3>Construção</h3>
+        <p>Estruturação do site com identidade visual própria, textos e imagens organizados de acordo com o que foi levantado na etapa anterior.</p>
       </div>
       <div class="step">
         <span class="num">03</span>
-        <h3>Ajustes</h3>
-        <p>Você revisa, pedimos os ajustes que fizerem sentido.</p>
+        <h3>Revisão</h3>
+        <p>Apresentação da versão inicial para ajustes de conteúdo, visual e funcionalidade, com quantas rodadas forem necessárias dentro do escopo combinado.</p>
       </div>
       <div class="step">
         <span class="num">04</span>
-        <h3>Site no ar</h3>
-        <p>Publicamos e explicamos como manter tudo funcionando.</p>
+        <h3>Publicação</h3>
+        <p>Site colocado no ar, com explicação clara de como fazer pequenas atualizações futuras ou solicitar suporte quando necessário.</p>
       </div>
     </div>
   </div>
@@ -279,36 +290,25 @@
 <section id="servicos" class="servicos">
   <div class="wrap">
     <div class="section-label">Serviços</div>
-    <h2 class="section-title">Para quem já tem um negócio e precisa de presença online</h2>
+    <h2 class="section-title">Criação de sites, do zero ou a partir do que já existe</h2>
+    <p class="section-intro">O foco é exclusivamente a construção do site — sem pacotes paralelos, sem serviços genéricos de marketing.</p>
     <div class="cards">
       <div class="card">
         <h3>Site institucional</h3>
-        <div class="price">Sob consulta</div>
-        <p>Ideal pra apresentar o negócio, serviços e forma de contato.</p>
+        <p>Construção de um site novo, do zero, pra apresentar o negócio, os serviços oferecidos e os canais de contato de forma clara e profissional.</p>
         <ul>
-          <li>Até 5 seções</li>
-          <li>Otimizado pra celular</li>
-          <li>Formulário de contato</li>
+          <li>Estrutura sob medida para o negócio</li>
+          <li>Totalmente adaptado para celular</li>
+          <li>Formulário e canais de contato integrados</li>
         </ul>
       </div>
       <div class="card">
         <h3>Atualização de site existente</h3>
-        <div class="price">Sob consulta</div>
-        <p>Pra quem já tem site, mas está desatualizado ou difícil de mexer.</p>
+        <p>Para negócios que já têm site, mas ele está desatualizado, com visual antigo ou difícil de manter.</p>
         <ul>
-          <li>Revisão de conteúdo</li>
-          <li>Novo visual</li>
-          <li>Correção de informações</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Perfil no Google Maps</h3>
-        <div class="price">Sob consulta</div>
-        <p>Cardápio, fotos, horários e links de delivery atualizados.</p>
-        <ul>
-          <li>Correção de dados</li>
-          <li>Fotos atuais</li>
-          <li>Links úteis</li>
+          <li>Revisão completa do conteúdo</li>
+          <li>Reconstrução do visual</li>
+          <li>Correção de informações desatualizadas</li>
         </ul>
       </div>
     </div>
@@ -319,24 +319,23 @@
   <div class="wrap">
     <div class="section-label">Trabalhos</div>
     <h2 class="section-title">Transformações</h2>
-    <div style="display:flex; flex-direction:column; gap:28px;">
-      <div style="border-radius:6px; overflow:hidden; border:1px solid rgba(237,230,214,0.12); position:relative;">
-        <img src="img/clinica-antes-depois.png" alt="Transformação de site para clínica odontológica" style="width:100%; display:block;">
-        <span style="position:absolute; bottom:12px; right:12px; font-size:0.6rem; color:var(--sage); background:rgba(27,36,32,0.55); padding:2px 6px; border-radius:3px; opacity:0.8;">Demonstrativo</span>
-      </div>
-      <div style="border-radius:6px; overflow:hidden; border:1px solid rgba(237,230,214,0.12); position:relative;">
-        <img src="img/pousada-antes-depois.png" alt="Transformação de site para pousada" style="width:100%; display:block;">
-        <span style="position:absolute; bottom:12px; right:12px; font-size:0.6rem; color:var(--sage); background:rgba(27,36,32,0.55); padding:2px 6px; border-radius:3px; opacity:0.8;">Demonstrativo</span>
-      </div>
+    <p class="section-intro">Exemplos de como um site desatualizado pode ser reconstruído — estrutura, visual e clareza de informação.</p>
+    <div class="portfolio-item">
+      <img src="img/clinica-antes-depois.png" alt="Transformação de site para clínica odontológica">
+      <span class="demo-tag">Demonstrativo</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="img/pousada-antes-depois.png" alt="Transformação de site para pousada">
+      <span class="demo-tag">Demonstrativo</span>
     </div>
   </div>
 </section>
 
-<section id="sobre">
+<section id="sobre" class="sobre">
   <div class="wrap">
     <div class="section-label">Sobre</div>
-    <h2 class="section-title">Foco total em criação de sites</h2>
-    <p style="max-width:60ch; color:var(--sage); font-size:1rem;">A Ápice se dedica exclusivamente a criar e atualizar sites para negócios locais — sem distrações, sem pacotes genéricos. Cada projeto é construído do zero, pensado pro tipo de cliente que aquele negócio realmente atende.</p>
+    <h2 class="section-title">Foco exclusivo em criação de sites</h2>
+    <p>A Ápice se dedica somente à construção e atualização de sites para negócios locais. Não há pacotes paralelos nem serviços genéricos — cada projeto é conduzido do início ao fim com atenção ao que aquele negócio específico precisa comunicar para o seu público.</p>
   </div>
 </section>
 
@@ -353,7 +352,7 @@
 
 <footer>
   <div class="wrap">
-    Ápice — sites e presença digital para negócios locais.
+    Ápice — criação de sites para negócios locais.
   </div>
 </footer>
 
