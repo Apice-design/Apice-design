@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ápice — Criação de sites profissionais</title>
+<meta name="description" content="Criação e atualização de sites profissionais para negócios locais. Site institucional, visual próprio e processo claro do início à publicação.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23161F1B'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%23C99A3B'/%3E%3Cellipse cx='50' cy='50' rx='22' ry='17' fill='none' stroke='%23C99A3B' stroke-width='3' opacity='0.7'/%3E%3Cellipse cx='50' cy='50' rx='34' ry='27' fill='none' stroke='%23C99A3B' stroke-width='2' opacity='0.4'/%3E%3C/svg%3E">
 <meta name='impact-site-verification' value='828f4e5a-89b1-4580-aed8-f99e3f89ea7b'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +20,7 @@
     --sage: #7C8B7A;
     --bone: #F6F2E9;
     --bone-deep: #EDE4D3;
+    --gold-tint: #2B2416;
   }
   *{ margin:0; padding:0; box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
@@ -43,7 +46,15 @@
   .logo{ font-family:'Fraunces', serif; font-size: 1.4rem; font-weight:600; }
   .nav-links{ display:flex; gap: 32px; font-size: 0.92rem; }
   .nav-links a{ opacity: 0.8; transition: opacity 0.2s; }
-  .nav-links a:hover{ opacity: 1; }
+  .nav-links a:hover{ opacity: 1; color: var(--amber); }
+  .nav-toggle{
+    display:none; background:none; border:none; cursor:pointer;
+    width: 32px; height: 22px; flex-direction: column; justify-content: space-between;
+    padding: 0;
+  }
+  .nav-toggle span{
+    display:block; height:2px; width:100%; background: var(--parchment); border-radius: 2px;
+  }
 
   .hero{
     position: relative;
@@ -134,6 +145,7 @@
     border-top: 2px solid var(--amber);
     padding-top: 22px;
   }
+  .step:nth-child(even){ border-top-color: var(--rust); }
   .step .num{
     font-family: 'Fraunces', serif;
     font-size: 1.7rem;
@@ -141,6 +153,7 @@
     display: block;
     margin-bottom: 14px;
   }
+  .step:nth-child(even) .num{ color: var(--rust); }
   .step h3{ font-size: 1.08rem; margin-bottom: 10px; }
   .step p{ font-size: 0.92rem; color: var(--sage); line-height: 1.65; }
 
@@ -160,6 +173,12 @@
     padding: 36px 32px;
     border: 1px solid rgba(27,36,32,0.08);
     border-left: 3px solid var(--rust);
+    box-shadow: 0 8px 24px rgba(27,36,32,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(27,36,32,0.1);
   }
   .card h3{ font-size: 1.2rem; margin-bottom: 12px; }
   .card p{ font-size: 0.95rem; color: #4C564E; margin-bottom: 16px; }
@@ -208,17 +227,52 @@
   }
 
   @media (max-width: 800px){
-    .hero{ grid-template-columns: 1fr; padding-top: 50px; }
-    .topo{ position: static; transform:none; width:100%; height:auto; margin-top: 20px; opacity: 0.6; }
-    .steps{ grid-template-columns: 1fr 1fr; }
+    section{ padding: 64px 0; }
+    .section-intro{ margin-bottom: 36px; }
+    .hero{ grid-template-columns: 1fr; padding: 40px 0 70px; }
+    .topo{ position: static; transform:none; width:100%; max-width: 320px; height:auto; margin: 24px auto 0; opacity: 0.6; }
+    .steps{ grid-template-columns: 1fr 1fr; gap: 20px; }
     .cards{ grid-template-columns: 1fr; }
-    .nav-links{ display:none; }
+    .nav-toggle{ display:flex; }
+    .nav-links{
+      display: none;
+      position: absolute; top: 68px; left: 0; right: 0;
+      flex-direction: column; gap: 0;
+      background: var(--ink-soft);
+      border-top: 1px solid rgba(237,230,214,0.1);
+      z-index: 20;
+    }
+    .nav-links.open{ display:flex; }
+    .nav-links a{
+      padding: 16px 32px;
+      border-bottom: 1px solid rgba(237,230,214,0.08);
+    }
+    nav{ position: relative; }
+  }
+
+  @media (max-width: 480px){
+    .steps{ grid-template-columns: 1fr; }
+    .hero h1{ font-size: 2rem; }
   }
 
   @media (prefers-reduced-motion: reduce){
-    .btn-primary:hover{ transform:none; }
+    .btn-primary:hover, .card:hover{ transform:none; }
   }
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if(toggle && links){
+      toggle.addEventListener('click', function(){
+        links.classList.toggle('open');
+      });
+      links.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){ links.classList.remove('open'); });
+      });
+    }
+  });
+</script>
 </head>
 <body>
 
@@ -231,6 +285,9 @@
       <a href="dicas-site-para-seu-negocio.html">Blog</a>
       <a href="#contato">Contato</a>
     </div>
+    <button class="nav-toggle" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 </div>
 
@@ -315,7 +372,7 @@
   </div>
 </section>
 
-<section id="portfolio">
+<section id="portfolio" style="background: var(--gold-tint);">
   <div class="wrap">
     <div class="section-label">Trabalhos</div>
     <h2 class="section-title">Transformações</h2>
