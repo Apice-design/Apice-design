@@ -21,6 +21,7 @@
     --bone: #F6F2E9;
     --bone-deep: #EDE4D3;
     --gold-tint: #2B2416;
+    --teal: #3E6B5C;
   }
   *{ margin:0; padding:0; box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
@@ -30,6 +31,34 @@
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+  }
+  .reveal{
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in-view{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-stagger.in-view .step,
+  .reveal-stagger.in-view .card{
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .reveal-stagger .step:nth-child(1), .reveal-stagger .card:nth-child(1){ animation-delay: 0s; }
+  .reveal-stagger .step:nth-child(2), .reveal-stagger .card:nth-child(2){ animation-delay: 0.1s; }
+  .reveal-stagger .step:nth-child(3){ animation-delay: 0.2s; }
+  .reveal-stagger .step:nth-child(4){ animation-delay: 0.3s; }
+  .reveal-stagger .step, .reveal-stagger .card{ opacity: 0; }
+  .reveal-stagger.in-view .step, .reveal-stagger.in-view .card{ opacity:1; }
+  @keyframes fadeUp{
+    from{ opacity:0; transform: translateY(20px); }
+    to{ opacity:1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal, .reveal-stagger .step, .reveal-stagger .card{
+      opacity:1 !important; transform:none !important; animation:none !important;
+    }
   }
   h1,h2,h3{
     font-family: 'Fraunces', serif;
@@ -63,6 +92,8 @@
     grid-template-columns: 1.1fr 0.9fr;
     gap: 40px;
     align-items: center;
+    background: radial-gradient(ellipse at 80% 30%, rgba(201,154,59,0.12), transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(181,86,58,0.08), transparent 55%);
   }
   .hero h1{
     font-size: clamp(2.4rem, 4.5vw, 3.6rem);
@@ -176,9 +207,10 @@
     box-shadow: 0 8px 24px rgba(27,36,32,0.06);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
+  .card:nth-child(2){ border-left-color: var(--teal); }
   .card:hover{
     transform: translateY(-3px);
-    box-shadow: 0 14px 32px rgba(27,36,32,0.1);
+    box-shadow: 0 14px 32px rgba(62,107,92,0.14);
   }
   .card h3{ font-size: 1.2rem; margin-bottom: 12px; }
   .card p{ font-size: 0.95rem; color: #4C564E; margin-bottom: 16px; }
@@ -271,6 +303,21 @@
         a.addEventListener('click', function(){ links.classList.remove('open'); });
       });
     }
+
+    var revealEls = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealEls.forEach(function(el){ observer.observe(el); });
+    } else {
+      revealEls.forEach(function(el){ el.classList.add('in-view'); });
+    }
   });
 </script>
 </head>
@@ -294,7 +341,7 @@
 <div class="wrap hero">
   <div>
     <h1>Seu negócio no digital, sem complicação.</h1>
-    <p>Criação de sites profissionais para negócios que querem ser encontrados online — sem jargão técnico e sem dor de cabeça.</p>
+    <p>Criação de sites profissionais para negócios que querem ser encontrados online. Do primeiro rascunho até o site publicado, cada etapa é conduzida com atenção ao que o seu público precisa ver — sem jargão técnico e sem dor de cabeça no caminho.</p>
     <div class="hero-ctas">
       <a class="btn btn-primary" href="#contato">Quero meu site</a>
       <a class="btn btn-ghost" href="#processo">Ver o processo</a>
@@ -314,12 +361,12 @@
 
 <div class="divider"></div>
 
-<section id="processo" class="processo">
+<section id="processo" class="processo reveal">
   <div class="wrap">
     <div class="section-label">Processo</div>
     <h2 class="section-title">Como o projeto é conduzido, do início à publicação</h2>
     <p class="section-intro">Um processo estruturado em quatro etapas, pensado pra você acompanhar cada decisão sem precisar entender de programação ou design.</p>
-    <div class="steps">
+    <div class="steps reveal-stagger">
       <div class="step">
         <span class="num">01</span>
         <h3>Levantamento</h3>
@@ -344,12 +391,12 @@
   </div>
 </section>
 
-<section id="servicos" class="servicos">
+<section id="servicos" class="servicos reveal">
   <div class="wrap">
     <div class="section-label">Serviços</div>
     <h2 class="section-title">Criação de sites, do zero ou a partir do que já existe</h2>
     <p class="section-intro">O foco é exclusivamente a construção do site — sem pacotes paralelos, sem serviços genéricos de marketing.</p>
-    <div class="cards">
+    <div class="cards reveal-stagger">
       <div class="card">
         <h3>Site institucional</h3>
         <p>Construção de um site novo, do zero, pra apresentar o negócio, os serviços oferecidos e os canais de contato de forma clara e profissional.</p>
@@ -372,7 +419,7 @@
   </div>
 </section>
 
-<section id="portfolio" style="background: var(--gold-tint);">
+<section id="portfolio" class="reveal" style="background: var(--gold-tint);">
   <div class="wrap">
     <div class="section-label">Trabalhos</div>
     <h2 class="section-title">Transformações</h2>
@@ -388,15 +435,15 @@
   </div>
 </section>
 
-<section id="sobre" class="sobre">
+<section id="sobre" class="sobre reveal">
   <div class="wrap">
     <div class="section-label">Sobre</div>
     <h2 class="section-title">Foco exclusivo em criação de sites</h2>
-    <p>A Ápice se dedica somente à construção e atualização de sites para negócios locais. Não há pacotes paralelos nem serviços genéricos — cada projeto é conduzido do início ao fim com atenção ao que aquele negócio específico precisa comunicar para o seu público.</p>
+    <p>A Ápice se dedica somente à construção e atualização de sites para negócios locais. Não há pacotes paralelos nem serviços genéricos — cada projeto é conduzido do início ao fim com atenção ao que aquele negócio específico precisa comunicar para o seu público. Isso significa entender o tom de voz certo para cada tipo de cliente, organizar a informação de um jeito que faça sentido pra quem visita o site pela primeira vez, e cuidar dos detalhes que fazem a diferença entre um site esquecido e um site que realmente gera contato.</p>
   </div>
 </section>
 
-<section id="contato" class="cta-final">
+<section id="contato" class="cta-final reveal">
   <div class="wrap">
     <h2>Vamos colocar seu negócio no digital?</h2>
     <p style="color:var(--sage); max-width:40ch;">Fale direto comigo — sem formulário longo, sem enrolação.</p>
