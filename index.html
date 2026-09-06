@@ -17,10 +17,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/Apice-design/assets/index-D-wr5sE8.js"></script>
-    <link rel="stylesheet" crossorigin href="/Apice-design/assets/index-B13Eeugt.css">
+    <script type="module" crossorigin src="/Apice-design/assets/index-CcByySMm.js"></script>
+    <link rel="stylesheet" crossorigin href="/Apice-design/assets/index-C-8_axqO.css">
   </head>
   <body>
+    <script>
+      (function () {
+        var query = location.search;
+        if (query.indexOf('?/') === 0) {
+          var path = query.slice(2).split('&')[0].replace(/~and~/g, '&');
+          history.replaceState(null, null, location.pathname.replace(/\/$/, '') + '/' + path + location.hash);
+        }
+      })();
+    </script>
     <div id="root"></div>
   </body>
 </html>

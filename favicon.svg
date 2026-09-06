@@ -1,3 +1,7 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+<rect width="180" height="180" rx="36" fill="#161F1B"/>
+<circle cx="90" cy="90" r="6" fill="#C99A3B"/>
+<ellipse cx="90" cy="90" rx="30" ry="24" fill="none" stroke="#C99A3B" stroke-width="4" opacity="0.75"/>
+<ellipse cx="90" cy="90" rx="48" ry="38" fill="none" stroke="#C99A3B" stroke-width="3" opacity="0.45"/>
+<ellipse cx="90" cy="90" rx="66" ry="52" fill="none" stroke="#B5563A" stroke-width="3" opacity="0.35"/>
 </svg>
