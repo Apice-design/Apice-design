@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Sorriso — Exemplo</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',sans-serif;color:#1E2A22;line-height:1.6;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:20px 48px;background:#0F3D2E;color:#fff;}
+  nav .logo{font-family:'Fraunces',serif;font-size:1.2rem;}
+  nav ul{display:flex;gap:28px;list-style:none;font-size:.9rem;}
+  nav a{color:#EDE6D6;text-decoration:none;}
+  .btn{background:#C99A3B;color:#0F3D2E;padding:9px 18px;border-radius:5px;font-weight:600;font-size:.85rem;}
+  .hero{display:grid;grid-template-columns:1fr 1fr;background:#0F3D2E;color:#fff;padding:60px 48px 80px;gap:40px;align-items:center;}
+  .hero h1{font-size:2.6rem;line-height:1.1;margin-bottom:16px;}
+  .hero p{color:#B7C4BA;max-width:38ch;margin-bottom:24px;}
+  .hero img{width:100%;border-radius:8px;}
+  .services{padding:60px 48px;background:#F7F4EC;}
+  .services h2{font-size:1.9rem;margin-bottom:36px;}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .card{background:#fff;padding:22px;border-radius:8px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.05);}
+  .card .ic{font-size:1.8rem;margin-bottom:10px;}
+  .card h3{font-size:1rem;margin-bottom:6px;}
+  .card p{font-size:.85rem;color:#5C6B60;}
+  footer{padding:30px 48px;background:#0F3D2E;color:#B7C4BA;font-size:.85rem;text-align:center;}
+</style>
+</head>
+<body>
+<nav>
+  <span class="logo">Clínica Sorriso</span>
+  <ul><li><a href="#">Início</a></li><li><a href="#">Serviços</a></li><li><a href="#">Equipe</a></li><li><a href="#">Contato</a></li></ul>
+  <span class="btn">Agendar consulta</span>
+</nav>
+<section class="hero">
+  <div>
+    <h1>Seu sorriso merece cuidado de verdade.</h1>
+    <p>Atendimento humanizado, tecnologia moderna e uma equipe pronta pra cuidar da sua saúde bucal em todas as fases da vida.</p>
+    <span class="btn">Marcar horário</span>
+  </div>
+  <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&q=80" alt="Consultório odontológico moderno">
+</section>
+<section class="services">
+  <h2>Nossos serviços</h2>
+  <div class="grid">
+    <div class="card"><div class="ic">🦷</div><h3>Limpeza</h3><p>Prevenção e cuidado de rotina.</p></div>
+    <div class="card"><div class="ic">✨</div><h3>Estética</h3><p>Clareamento e harmonização.</p></div>
+    <div class="card"><div class="ic">🔧</div><h3>Ortodontia</h3><p>Aparelhos e alinhadores.</p></div>
+    <div class="card"><div class="ic">🩺</div><h3>Implantes</h3><p>Soluções duradouras.</p></div>
+  </div>
+</section>
+<footer>Clínica Sorriso — Rua Exemplo, 123 · (00) 0000-0000</footer>
+</body>
+</html>
