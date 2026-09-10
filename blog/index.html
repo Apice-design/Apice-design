@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ápice — Blog</title>
+<meta name="description" content="Criação e atualização de sites profissionais para negócios locais. Processo claro, visual próprio e site publicado do início ao fim."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Ápice — Criação de sites profissionais"/>
+<meta property="og:site_name" content="Ápice"/>
+<meta property="og:description" content="Criação e atualização de sites profissionais para negócios locais."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://apice-design.github.io/Apice-design/logo-512.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Ápice — Criação de sites profissionais"/>
+<meta name="twitter:description" content="Criação e atualização de sites profissionais para negócios locais."/>
+<meta name='impact-site-verification' value='828f4e5a-89b1-4580-aed8-f99e3f89ea7b'/>
+<link rel="icon" type="image/svg+xml" href="/Apice-design/favicon-v2.svg"/>
+<link rel="icon" type="image/png" sizes="48x48" href="/Apice-design/favicon-48.png"/>
+<link rel="apple-touch-icon" href="/Apice-design/logo-192.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ápice",
+  "url": "https://apice-design.github.io/Apice-design/",
+  "logo": "https://apice-design.github.io/Apice-design/logo-512.png",
+  "description": "Criação e atualização de sites profissionais para negócios locais."
+}
+</script>
+<!-- Google Fonts: Fraunces (serif editorial com itálicos) & Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN com plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#121815',
+              darker: '#0A0E0C',
+              surface: '#18221D',
+              surfaceLight: '#1F2C26',
+              surfaceBorder: '#2E3F35',
+              lightText: '#F5EFE1',
+              muted: '#8CA08E',
+              gold: '#E5A93C',
+              goldLight: '#F3C667',
+              goldHover: '#d4982f',
+              terracotta: '#E2623F',
+              terracottaHover: '#cb4d2c',
+              terracottaLight: '#F87171',
+              emerald: '#10B981',
+              emeraldDeep: '#059669',
+              cream: '#F6F2E9',
+              creamAlt: '#EDE4D3',
+              creamDarkText: '#151D18',
+              creamMutedText: '#4A5B4C',
+              creamBorder: '#D8CEBA'
+            }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          animation: {
+            'spin-slow': 'spin 30s linear infinite',
+            'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite linear',
+            'sparkle': 'sparkle 2s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            pulseSoft: {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+              '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(200%)' }
+            },
+            sparkle: {
+              '0%': { transform: 'scale(0.85) rotate(0deg)', opacity: '0.6' },
+              '100%': { transform: 'scale(1.2) rotate(15deg)', opacity: '1' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Aurora glow vibrante & fundo dinâmico */
+    .aurora-hero {
+      background: 
+        radial-gradient(ellipse 60% 45% at 75% 25%, rgba(229, 169, 60, 0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 55% 40% at 20% 70%, rgba(226, 98, 63, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 15%, rgba(16, 185, 129, 0.10) 0%, transparent 60%);
+    }
+
+    /* Traço desenhado iluminado no ápice */
+    .glowing-stroke {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      animation: drawStroke 2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+    }
+
+    @keyframes drawStroke {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    /* Scroll reveal suave com stagger e desfoque elegante */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(22px);
+      filter: blur(4px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform, filter;
+    }
+    .reveal-item.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    /* Accordion transitions */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-out;
+      opacity: 0;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 280px;
+      opacity: 1;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+      color: #E5A93C;
+    }
+
+    /* Dynamic Card Glow Hover Effect */
+    .glow-card-dark {
+      position: relative;
+      transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 260ms ease, border-color 260ms ease;
+    }
+    .glow-card-dark::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(229, 169, 60, 0.35), transparent 45%, rgba(226, 98, 63, 0.3));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.35;
+      transition: opacity 260ms ease;
+    }
+    .glow-card-dark:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px -10px rgba(0, 0, 0, 0.55), 0 0 25px -5px rgba(229, 169, 60, 0.12);
+    }
+    .glow-card-dark:hover::before {
+      opacity: 1;
+    }
+
+    .glow-card-light {
+      transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 260ms ease, border-color 260ms ease;
+    }
+    .glow-card-light:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 38px -12px rgba(21, 29, 24, 0.15), 0 0 20px -2px rgba(229, 169, 60, 0.2);
+    }
+
+    /* Shimmer button effect */
+    .btn-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 80%
+      );
+      transform: rotate(30deg) translateX(-100%);
+      animation: btnShimmerAnim 4s infinite ease-in-out;
+    }
+    @keyframes btnShimmerAnim {
+      0%, 40% { transform: rotate(30deg) translateX(-120%); }
+      60%, 100% { transform: rotate(30deg) translateX(120%); }
+    }
+
+    /* Mouse Spotlight Tracker for Hero */
+    #spotlight-glow {
+      pointer-events: none;
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(229, 169, 60, 0.08) 0%, rgba(226, 98, 63, 0.04) 40%, transparent 70%);
+      transform: translate(-50%, -50%);
+      transition: opacity 0.4s ease;
+      z-index: 1;
+    }
+
+    /* Mini mockup interactive viewer tab */
+    .mockup-tab.active {
+      background-color: #121815;
+      color: #F5EFE1;
+      border-color: #E5A93C;
+      box-shadow: 0 0 14px -3px rgba(229, 169, 60, 0.4);
+    }
+  </style>
+</head>
+
+<body class="bg-brand-dark text-brand-lightText font-sans selection:bg-brand-gold selection:text-brand-darker overflow-x-hidden antialiased">
+<header class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-6 flex items-center justify-between">
+    <a class="flex items-center gap-3 group" href="../">
+      <span class="font-serif text-2xl font-semibold text-brand-lightText">Ápice</span>
+      <span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+    </a>
+    <a class="text-sm font-mono uppercase tracking-widest text-brand-muted hover:text-brand-gold transition-colors" href="../">← Ápice</a>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-6 md:px-10 pt-40 pb-16">
+  <span class="font-mono text-xs uppercase tracking-widest text-brand-terracotta">Blog</span>
+  <h1 class="font-serif text-4xl md:text-6xl font-medium tracking-tight text-brand-lightText mt-4 mb-16 pb-16 border-b border-brand-surfaceBorder/50">Presença digital, sem enrolação</h1>
+  
+<a class="reveal-item group block border-b border-brand-surfaceBorder/50 py-10 first:pt-0" href="5-sinais-atualizacao/">
+  <div class="mb-3 flex flex-wrap items-center gap-4 text-brand-terracotta font-mono text-xs uppercase tracking-widest">
+    <span>Presença digital</span><span class="w-1 h-1 rounded-full bg-brand-gold"></span><span>3 min</span>
+  </div>
+  <h2 class="font-serif text-2xl md:text-4xl font-medium tracking-tight text-brand-lightText flex items-center gap-3 group-hover:text-brand-gold transition-colors">
+    5 sinais de que o site do seu negócio precisa de atualização
+    <svg class="w-5 h-5 shrink-0 text-brand-terracotta group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+  </h2>
+  <p class="mt-3 max-w-[620px] text-brand-muted leading-relaxed">Muitos donos de negócio local têm um site, mas não percebem quando ele passou a atrapalhar mais do que ajudar.</p>
+</a>
+
+<a class="reveal-item group block border-b border-brand-surfaceBorder/50 py-10 first:pt-0" href="perfil-google-nao-substitui-site/">
+  <div class="mb-3 flex flex-wrap items-center gap-4 text-brand-terracotta font-mono text-xs uppercase tracking-widest">
+    <span>Presença digital</span><span class="w-1 h-1 rounded-full bg-brand-gold"></span><span>3 min</span>
+  </div>
+  <h2 class="font-serif text-2xl md:text-4xl font-medium tracking-tight text-brand-lightText flex items-center gap-3 group-hover:text-brand-gold transition-colors">
+    Ter um perfil no Google não substitui ter um site
+    <svg class="w-5 h-5 shrink-0 text-brand-terracotta group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+  </h2>
+  <p class="mt-3 max-w-[620px] text-brand-muted leading-relaxed">O perfil do Google ajuda bastante, mas resolve só parte do trabalho de ter presença digital.</p>
+</a>
+
+</main>
+
+<section class="max-w-3xl mx-auto px-6 md:px-10 pb-32 pt-8">
+  <span class="font-mono text-xs uppercase tracking-widest text-brand-terracotta">Dúvidas frequentes</span>
+  <h2 class="font-serif text-3xl md:text-4xl font-medium tracking-tight text-brand-lightText mt-4 mb-10">Perguntas comuns antes de começar</h2>
+  
+<div class="faq-item reveal-item border-b border-brand-surfaceBorder/50">
+  <button class="w-full flex items-center justify-between gap-6 py-6 text-left" onclick="this.parentElement.classList.toggle('active')">
+    <span class="font-serif text-lg md:text-xl text-brand-lightText flex items-baseline gap-4"><span class="text-brand-terracotta">01</span>Quem vai cuidar do projeto do início ao fim?</span>
+    <svg class="faq-icon w-5 h-5 shrink-0 text-brand-muted transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+  </button>
+  <div class="faq-answer">
+    <p class="pb-6 pl-9 pr-8 text-brand-muted leading-relaxed max-w-[620px]">Vale saber se você vai falar com a mesma pessoa durante todo o processo. Na Ápice é sempre a mesma pessoa, do primeiro contato até o site no ar.</p>
+  </div>
+</div>
+
+<div class="faq-item reveal-item border-b border-brand-surfaceBorder/50">
+  <button class="w-full flex items-center justify-between gap-6 py-6 text-left" onclick="this.parentElement.classList.toggle('active')">
+    <span class="font-serif text-lg md:text-xl text-brand-lightText flex items-baseline gap-4"><span class="text-brand-terracotta">02</span>Como funciona depois que o site está no ar?</span>
+    <svg class="faq-icon w-5 h-5 shrink-0 text-brand-muted transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+  </button>
+  <div class="faq-answer">
+    <p class="pb-6 pl-9 pr-8 text-brand-muted leading-relaxed max-w-[620px]">Pequenas mudanças de texto ou foto no futuro têm custo? Isso é explicado com clareza já na entrega do projeto.</p>
+  </div>
+</div>
+
+<div class="faq-item reveal-item border-b border-brand-surfaceBorder/50">
+  <button class="w-full flex items-center justify-between gap-6 py-6 text-left" onclick="this.parentElement.classList.toggle('active')">
+    <span class="font-serif text-lg md:text-xl text-brand-lightText flex items-baseline gap-4"><span class="text-brand-terracotta">03</span>Quanto tempo leva, e o que pode atrasar?</span>
+    <svg class="faq-icon w-5 h-5 shrink-0 text-brand-muted transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+  </button>
+  <div class="faq-answer">
+    <p class="pb-6 pl-9 pr-8 text-brand-muted leading-relaxed max-w-[620px]">Um prazo claro, e entender o que depende de você (enviar textos e fotos) ajuda a evitar expectativa errada.</p>
+  </div>
+</div>
+
+<div class="faq-item reveal-item border-b border-brand-surfaceBorder/50">
+  <button class="w-full flex items-center justify-between gap-6 py-6 text-left" onclick="this.parentElement.classList.toggle('active')">
+    <span class="font-serif text-lg md:text-xl text-brand-lightText flex items-baseline gap-4"><span class="text-brand-terracotta">04</span>O que está incluso no valor combinado?</span>
+    <svg class="faq-icon w-5 h-5 shrink-0 text-brand-muted transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+  </button>
+  <div class="faq-answer">
+    <p class="pb-6 pl-9 pr-8 text-brand-muted leading-relaxed max-w-[620px]">Formulário de contato, adaptação pro celular, ajustes de revisão — vale confirmar o que já está no preço.</p>
+  </div>
+</div>
+
+</section>
+
+<footer class="border-t border-brand-surfaceBorder/60 bg-brand-darker">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 py-8 flex flex-col md:flex-row justify-between gap-3 text-sm text-brand-muted">
+    <div>
+      <p class="font-serif text-lg text-brand-lightText">Ápice — criação de sites profissionais.</p>
+      <a class="hover:text-brand-gold transition-colors" href="mailto:marchioriheitor6@gmail.com">marchioriheitor6@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const items = document.querySelectorAll('.reveal-item');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-revealed'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  items.forEach(i => obs.observe(i));
+</script>
+</body>
+</html>

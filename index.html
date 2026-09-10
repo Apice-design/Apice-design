@@ -1,49 +1,1132 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Ápice — Criação de sites profissionais</title>
-    <meta name="description" content="Criação e atualização de sites profissionais para negócios locais. Processo claro, visual próprio e site publicado do início ao fim." />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Ápice — Criação de sites profissionais" />
-    <meta property="og:site_name" content="Ápice" />
-    <meta property="og:description" content="Criação e atualização de sites profissionais para negócios locais. Processo claro, visual próprio e site publicado do início ao fim." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://apice-design.github.io/Apice-design/logo-512.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ápice — Criação de sites profissionais" />
-    <meta name="twitter:description" content="Criação e atualização de sites profissionais para negócios locais." />
-    <meta name='impact-site-verification' value='828f4e5a-89b1-4580-aed8-f99e3f89ea7b' />
-    <link rel="icon" type="image/svg+xml" href="/Apice-design/favicon-v2.svg" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/Apice-design/favicon-48.png" />
-    <link rel="apple-touch-icon" href="/Apice-design/logo-192.png" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Ápice",
-      "url": "https://apice-design.github.io/Apice-design/",
-      "logo": "https://apice-design.github.io/Apice-design/logo-512.png",
-      "description": "Criação e atualização de sites profissionais para negócios locais."
-    }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/Apice-design/assets/index-C0PSTiSG.js"></script>
-    <link rel="stylesheet" crossorigin href="/Apice-design/assets/index-Cdg28S61.css">
-  </head>
-  <body>
-    <script>
-      (function () {
-        var query = location.search;
-        if (query.indexOf('?/') === 0) {
-          var path = query.slice(2).split('&')[0].replace(/~and~/g, '&');
-          history.replaceState(null, null, location.pathname.replace(/\/$/, '') + '/' + path + location.hash);
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ápice — Web Design &amp; Presença Digital para Negócios</title>
+<meta name="description" content="Criação e atualização de sites profissionais para negócios locais. Processo claro, visual próprio e site publicado do início ao fim."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="Ápice — Criação de sites profissionais"/>
+<meta property="og:site_name" content="Ápice"/>
+<meta property="og:description" content="Criação e atualização de sites profissionais para negócios locais."/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://apice-design.github.io/Apice-design/logo-512.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Ápice — Criação de sites profissionais"/>
+<meta name="twitter:description" content="Criação e atualização de sites profissionais para negócios locais."/>
+<meta name='impact-site-verification' value='828f4e5a-89b1-4580-aed8-f99e3f89ea7b'/>
+<link rel="icon" type="image/svg+xml" href="/Apice-design/favicon-v2.svg"/>
+<link rel="icon" type="image/png" sizes="48x48" href="/Apice-design/favicon-48.png"/>
+<link rel="apple-touch-icon" href="/Apice-design/logo-192.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ápice",
+  "url": "https://apice-design.github.io/Apice-design/",
+  "logo": "https://apice-design.github.io/Apice-design/logo-512.png",
+  "description": "Criação e atualização de sites profissionais para negócios locais."
+}
+</script>
+<!-- Google Fonts: Fraunces (serif editorial com itálicos) & Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&amp;family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN com plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#121815',
+              darker: '#0A0E0C',
+              surface: '#18221D',
+              surfaceLight: '#1F2C26',
+              surfaceBorder: '#2E3F35',
+              lightText: '#F5EFE1',
+              muted: '#8CA08E',
+              gold: '#E5A93C',
+              goldLight: '#F3C667',
+              goldHover: '#d4982f',
+              terracotta: '#E2623F',
+              terracottaHover: '#cb4d2c',
+              terracottaLight: '#F87171',
+              emerald: '#10B981',
+              emeraldDeep: '#059669',
+              cream: '#F6F2E9',
+              creamAlt: '#EDE4D3',
+              creamDarkText: '#151D18',
+              creamMutedText: '#4A5B4C',
+              creamBorder: '#D8CEBA'
+            }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          animation: {
+            'spin-slow': 'spin 30s linear infinite',
+            'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'shimmer': 'shimmer 2.5s infinite linear',
+            'sparkle': 'sparkle 2s ease-in-out infinite alternate',
+          },
+          keyframes: {
+            pulseSoft: {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+              '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(200%)' }
+            },
+            sparkle: {
+              '0%': { transform: 'scale(0.85) rotate(0deg)', opacity: '0.6' },
+              '100%': { transform: 'scale(1.2) rotate(15deg)', opacity: '1' }
+            }
+          }
         }
-      })();
-    </script>
-    <div id="root"></div>
-  </body>
-</html>
+      }
+    }
+  </script>
+<style>
+    /* Aurora glow vibrante & fundo dinâmico */
+    .aurora-hero {
+      background: 
+        radial-gradient(ellipse 60% 45% at 75% 25%, rgba(229, 169, 60, 0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 55% 40% at 20% 70%, rgba(226, 98, 63, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 30% at 50% 15%, rgba(16, 185, 129, 0.10) 0%, transparent 60%);
+    }
+
+    /* Traço desenhado iluminado no ápice */
+    .glowing-stroke {
+      stroke-dasharray: 400;
+      stroke-dashoffset: 400;
+      animation: drawStroke 2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+    }
+
+    @keyframes drawStroke {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    /* Scroll reveal suave com stagger e desfoque elegante */
+    .reveal-item {
+      opacity: 0;
+      transform: translateY(22px);
+      filter: blur(4px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform, filter;
+    }
+    .reveal-item.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    /* Accordion transitions */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease-out;
+      opacity: 0;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 280px;
+      opacity: 1;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+      color: #E5A93C;
+    }
+
+    /* Dynamic Card Glow Hover Effect */
+    .glow-card-dark {
+      position: relative;
+      transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 260ms ease, border-color 260ms ease;
+    }
+    .glow-card-dark::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(229, 169, 60, 0.35), transparent 45%, rgba(226, 98, 63, 0.3));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.35;
+      transition: opacity 260ms ease;
+    }
+    .glow-card-dark:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px -10px rgba(0, 0, 0, 0.55), 0 0 25px -5px rgba(229, 169, 60, 0.12);
+    }
+    .glow-card-dark:hover::before {
+      opacity: 1;
+    }
+
+    .glow-card-light {
+      transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 260ms ease, border-color 260ms ease;
+    }
+    .glow-card-light:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 38px -12px rgba(21, 29, 24, 0.15), 0 0 20px -2px rgba(229, 169, 60, 0.2);
+    }
+
+    /* Shimmer button effect */
+    .btn-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0) 20%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 80%
+      );
+      transform: rotate(30deg) translateX(-100%);
+      animation: btnShimmerAnim 4s infinite ease-in-out;
+    }
+    @keyframes btnShimmerAnim {
+      0%, 40% { transform: rotate(30deg) translateX(-120%); }
+      60%, 100% { transform: rotate(30deg) translateX(120%); }
+    }
+
+    /* Mouse Spotlight Tracker for Hero */
+    #spotlight-glow {
+      pointer-events: none;
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(229, 169, 60, 0.08) 0%, rgba(226, 98, 63, 0.04) 40%, transparent 70%);
+      transform: translate(-50%, -50%);
+      transition: opacity 0.4s ease;
+      z-index: 1;
+    }
+
+    /* Mini mockup interactive viewer tab */
+    .mockup-tab.active {
+      background-color: #121815;
+      color: #F5EFE1;
+      border-color: #E5A93C;
+      box-shadow: 0 0 14px -3px rgba(229, 169, 60, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-brand-dark text-brand-lightText font-sans selection:bg-brand-gold selection:text-brand-darker overflow-x-hidden antialiased">
+<!-- TOPOGRAPHIC SIGNATURE ACCENT BACKGROUND -->
+<div class="fixed inset-0 pointer-events-none z-0 opacity-20 overflow-hidden" id="topo-bg">
+<svg class="w-full h-full object-cover scale-110" fill="none" viewbox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<path d="M-100,200 C300,100 500,450 1300,250" stroke="#F5EFE1" stroke-dasharray="6 8" stroke-width="1"></path>
+<path d="M-100,260 C280,160 520,510 1300,310" stroke="#F5EFE1" stroke-width="1.2"></path>
+<path d="M-100,320 C260,220 540,570 1300,370" stroke="#E5A93C" stroke-width="1.4"></path>
+<path d="M-100,380 C240,280 560,630 1300,430" stroke="#10B981" stroke-dasharray="3 6" stroke-width="1"></path>
+<path d="M-100,440 C220,340 580,690 1300,490" stroke="#E2623F" stroke-width="1.4"></path>
+<path d="M-100,500 C200,400 600,750 1300,550" stroke="#F5EFE1" stroke-dasharray="4 6" stroke-width="0.8"></path>
+<path d="M-100,560 C180,460 620,810 1300,610" stroke="#F5EFE1" stroke-width="0.8"></path>
+<path d="M400,0 C650,250 850,50 1100,700" stroke="#F5EFE1" stroke-width="0.6"></path>
+<path d="M450,0 C700,250 900,50 1150,700" stroke="#E5A93C" stroke-dasharray="5 5" stroke-width="0.9"></path>
+</svg>
+</div>
+<!-- NAVIGATION BAR -->
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-6 md:px-12 bg-brand-dark/75 backdrop-blur-md border-b border-brand-surfaceBorder/40" id="navbar">
+<div class="max-w-6xl mx-auto flex items-center justify-between">
+<!-- Brand Logo / Wordmark - Redesenhada e Premium -->
+<a class="flex items-center gap-3.5 group text-decoration-none" href="#">
+<!-- Emblema vetorial geométrico com pico/ápice estilizado -->
+<div class="relative w-10 h-10 rounded-lg bg-gradient-to-br from-brand-surfaceLight to-brand-surface border border-brand-surfaceBorder p-0.5 shadow-md group-hover:border-brand-gold/70 transition-all duration-300">
+<div class="w-full h-full rounded-[6px] bg-[#121915] flex items-center justify-center overflow-hidden relative">
+<!-- Traço topográfico dourado interno -->
+<svg class="w-7 h-7" fill="none" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<!-- Pico estilizado com gradiente -->
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="apiceGrad" x1="16" x2="16" y1="5" y2="27">
+<stop offset="0%" stop-color="#F3C667"></stop>
+<stop offset="60%" stop-color="#E5A93C"></stop>
+<stop offset="100%" stop-color="#E2623F"></stop>
+</lineargradient>
+</defs>
+<!-- Geometria do pico A -->
+<path d="M16 5L5 26H11L16 15L21 26H27L16 5Z" fill="url(#apiceGrad)"></path>
+<!-- Linha horizontal do ápice em negativo -->
+<path d="M12 20.5H20" stroke="#121915" stroke-linecap="round" stroke-width="2"></path>
+<!-- Pequeno ponto luminoso no pico máximo -->
+<circle cx="16" cy="5" fill="#FFFFFF" r="1.5"></circle>
+</svg>
+<div class="absolute inset-0 bg-brand-gold/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+<!-- Tipografia do Logotipo e Descritivo -->
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-serif font-extrabold tracking-tight text-xl text-brand-lightText group-hover:text-brand-gold transition-colors">
+              ÁPICE
+            </span>
+<!-- Badge de Status em Tempo Real -->
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-[10px] font-mono font-medium text-emerald-400">
+<span class="relative flex h-1.5 w-1.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
+</span>
+<span class="tracking-wide">Agenda aberta</span>
+</span>
+</div>
+<span class="font-mono text-[9px] uppercase tracking-wider text-brand-muted -mt-0.5 group-hover:text-brand-lightText/70 transition-colors">
+            Web Design &amp; Presença Digital para Negócios
+          </span>
+</div>
+</a>
+<!-- Desktop Nav Items -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-lightText/85">
+<a class="hover:text-brand-gold transition-colors" href="#processo">Processo</a>
+<a class="hover:text-brand-gold transition-colors" href="#servicos">Serviços</a>
+<a class="hover:text-brand-gold transition-colors" href="#exemplos">Exemplos</a>
+<a class="hover:text-brand-gold transition-colors" href="#sobre">Sobre</a>
+<a class="hover:text-brand-gold transition-colors" href="#duvidas">Dúvidas</a>
+<a class="hover:text-brand-gold transition-colors" href="blog/">Blog</a>
+</nav>
+<!-- Primary CTA: WhatsApp com efeito shimmer -->
+<div class="hidden md:flex items-center gap-4">
+<a class="btn-shimmer inline-flex items-center gap-2.5 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold hover:from-brand-goldHover hover:to-brand-gold text-brand-darker font-bold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 shadow-md shadow-brand-gold/15 hover:shadow-lg hover:shadow-brand-gold/25 hover:translate-y-[-1px] active:translate-y-0" href="https://wa.me/5528999770520" rel="noopener noreferrer" target="_blank">
+<span>Quero meu site</span>
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.588-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.18-.538-1.77-.736-2.91-2.531-2.998-2.648-.088-.116-.717-.954-.717-1.817s.45-1.286.61-1.46c.162-.175.353-.219.47-.219.117 0 .235.001.338.006.107.005.252-.041.394.3.147.352.502 1.226.546 1.314.044.088.073.191.015.307-.058.117-.088.19-.176.293-.088.102-.186.229-.265.308-.088.087-.18.182-.078.357.103.175.457.754.981 1.221.674.601 1.243.787 1.419.874.176.088.279.073.382-.044.103-.117.44-.513.558-.689.117-.175.235-.146.397-.087.161.058 1.028.484 1.205.572.176.088.293.132.337.205.044.073.044.425-.1 1.042z"></path>
+</svg>
+</a>
+</div>
+<!-- Mobile Menu Button -->
+<button aria-label="Abrir menu" class="md:hidden text-brand-lightText hover:text-brand-gold p-2" id="mobileMenuBtn">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Mobile Dropdown Nav -->
+<div class="hidden md:hidden bg-brand-surface/98 backdrop-blur-md border border-brand-surfaceBorder rounded-xl mt-3 p-5 shadow-2xl flex-col gap-4" id="mobileMenu">
+<div class="flex items-center justify-between pb-3 border-b border-brand-surfaceBorder">
+<span class="text-xs font-mono text-brand-muted">Status do atendimento:</span>
+<span class="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400">
+<span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Agenda aberta
+        </span>
+</div>
+<a class="text-brand-lightText hover:text-brand-gold py-1 border-b border-brand-surfaceBorder/40" href="#processo">Processo</a>
+<a class="text-brand-lightText hover:text-brand-gold py-1 border-b border-brand-surfaceBorder/40" href="#servicos">Serviços</a>
+<a class="text-brand-lightText hover:text-brand-gold py-1 border-b border-brand-surfaceBorder/40" href="#exemplos">Exemplos</a>
+<a class="text-brand-lightText hover:text-brand-gold py-1 border-b border-brand-surfaceBorder/40" href="#sobre">Sobre</a>
+<a class="text-brand-lightText hover:text-brand-gold py-1 border-b border-brand-surfaceBorder/40" href="#duvidas">Dúvidas</a>
+<a class="text-brand-lightText hover:text-brand-gold py-1 border-b border-brand-surfaceBorder/40" href="blog/">Blog</a>
+<a class="mt-2 text-center bg-brand-gold text-brand-darker font-bold py-2.5 rounded-lg shadow-lg" href="https://wa.me/5528999770520" rel="noopener noreferrer" target="_blank">
+        Quero meu site no WhatsApp
+      </a>
+</div>
+</header>
+<!-- MAIN WRAPPER -->
+<main class="relative z-10">
+<!-- HERO SECTION (Composição Artística Expressiva, Aurora Glow & Efeitos de Iluminação) -->
+<section class="relative min-h-[94vh] flex items-center justify-center pt-32 pb-24 px-6 md:px-12 aurora-hero border-b border-brand-surfaceBorder/70 overflow-hidden" id="hero-section">
+<!-- Mouse Follow Glow (Spotlight interativo) -->
+<div id="spotlight-glow"></div>
+<!-- Órbitas e Grafismos Topográficos em Movimento Sutil -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-40 select-none" id="hero-parallax">
+<svg class="max-w-none animate-spin-slow" fill="none" height="780" viewbox="0 0 700 700" width="780" xmlns="http://www.w3.org/2000/svg">
+<circle cx="350" cy="350" opacity="0.4" r="320" stroke="#8CA08E" stroke-dasharray="4 8" stroke-width="0.8"></circle>
+<circle cx="350" cy="350" opacity="0.3" r="260" stroke="#E5A93C" stroke-dasharray="6 12" stroke-width="1"></circle>
+<circle cx="350" cy="350" opacity="0.25" r="200" stroke="#E2623F" stroke-width="0.9"></circle>
+<circle cx="350" cy="350" opacity="0.25" r="140" stroke="#10B981" stroke-dasharray="3 6" stroke-width="0.75"></circle>
+<!-- Cruzes e marcadores de elevação topográfica -->
+<path d="M350 30 L350 670" opacity="0.3" stroke="#8CA08E" stroke-dasharray="4 6" stroke-width="0.5"></path>
+<path d="M30 350 L670 350" opacity="0.3" stroke="#8CA08E" stroke-dasharray="4 6" stroke-width="0.5"></path>
+</svg>
+</div>
+<!-- Elemento Flutuante Topográfico no Canto -->
+<div class="absolute right-6 top-36 hidden lg:flex flex-col items-end pointer-events-none animate-float opacity-70">
+<div class="font-mono text-[10px] tracking-widest text-brand-gold uppercase">ÁPICE · ELEV. MAX</div>
+<div class="w-16 h-0.5 bg-gradient-to-r from-transparent to-brand-gold mt-1"></div>
+<div class="font-mono text-[9px] text-brand-muted mt-0.5">20°49'S 41°07'W</div>
+</div>
+<div class="max-w-5xl mx-auto text-center relative z-10">
+<!-- COMPOSIÇÃO ARTÍSTICA DO TÍTULO (Tratamento Editorial de Alto Impacto Visual) -->
+<div class="relative mb-8 pt-4">
+<!-- Brilhos / Sparkles Artísticos decorativos -->
+<div class="absolute -top-3 left-1/4 transform -translate-x-12 text-brand-gold animate-sparkle pointer-events-none">
+<svg class="w-7 h-7" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"></path>
+</svg>
+</div>
+<div class="absolute top-1/2 right-1/6 transform translate-x-10 text-brand-terracotta animate-sparkle pointer-events-none" style="animation-delay: 1s;">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"></path>
+</svg>
+</div>
+<h1 class="leading-[1.05] tracking-tight">
+<!-- Linha 1: "Seu negócio" — Editorial elegante, limpo e com micro-badge integrado -->
+<div class="reveal-item flex items-center justify-center gap-3 mb-2">
+<span class="h-[1px] w-8 sm:w-16 bg-gradient-to-r from-transparent via-brand-muted/60 to-brand-muted"></span>
+<span class="font-serif text-2xl sm:text-4xl md:text-5xl font-light text-brand-lightText/75 tracking-tight">
+                Seu negócio
+              </span>
+<span class="h-[1px] w-8 sm:w-16 bg-gradient-to-l from-transparent via-brand-muted/60 to-brand-muted"></span>
+</div>
+<!-- Linha 2: "NO DIGITAL," — Bloco de Arte Visual com Gradiente Vívido Âmbar & Coral com Glassmorphism -->
+<div class="reveal-item my-2">
+<span class="inline-block font-sans font-black text-4xl sm:text-7xl md:text-8xl tracking-tight sm:tracking-tighter uppercase px-4 sm:px-8 py-1 rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/10 shadow-2xl bg-clip-text text-transparent bg-gradient-to-r from-[#F3C667] via-[#E5A93C] to-[#E2623F]">
+                NO DIGITAL,
+              </span>
+</div>
+<!-- Linha 3: "sem complicação." — Tipografia Cursiva Editorial Artística, Traço Iluminado Orgânico & Brilho -->
+<div class="reveal-item relative inline-block mt-2">
+<span class="relative z-10 font-serif italic font-semibold text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-brand-lightText text-shadow">
+                sem complicação.
+              </span>
+<!-- Traço Artístico Iluminado Duplo (SVG Dinâmico) -->
+<div class="w-full mt-1 sm:mt-2 -mb-2">
+<svg class="w-full h-5 sm:h-7" fill="none" preserveaspectratio="none" viewbox="0 0 500 24" xmlns="http://www.w3.org/2000/svg">
+<path class="glowing-stroke" d="M4 14 C120 4, 340 3, 496 16" stroke="url(#lineGradient1)" stroke-linecap="round" stroke-width="4.5"></path>
+<path d="M28 20 C160 12, 360 11, 470 19" opacity="0.85" stroke="#E2623F" stroke-dasharray="10 6" stroke-linecap="round" stroke-width="2"></path>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="lineGradient1" x1="4" x2="496" y1="14" y2="16">
+<stop offset="0%" stop-color="#E2623F"></stop>
+<stop offset="50%" stop-color="#E5A93C"></stop>
+<stop offset="100%" stop-color="#10B981"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+</h1>
+</div>
+<!-- Subtítulo fiel e polido -->
+<p class="reveal-item text-lg sm:text-xl text-brand-muted max-w-2xl mx-auto font-normal leading-relaxed mb-10">
+          Criação de sites profissionais para negócios que querem ser encontrados online — sem jargão técnico e sem dor de cabeça.
+        </p>
+<!-- CTAs Principais com Interatividade e Efeito Shimmer -->
+<div class="reveal-item flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
+<a class="btn-shimmer w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold hover:from-brand-goldHover hover:to-brand-gold text-brand-darker font-bold text-base px-8 py-4 rounded-xl transition-all duration-300 shadow-xl shadow-brand-gold/20 hover:shadow-2xl hover:shadow-brand-gold/30 hover:translate-y-[-2px] active:translate-y-0" href="https://wa.me/5528999770520" rel="noopener noreferrer" target="_blank">
+<span>Quero meu site</span>
+<svg class="w-5 h-5 text-brand-darker" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-brand-lightText hover:text-brand-gold px-7 py-4 rounded-xl border border-brand-surfaceBorder bg-brand-surface/40 hover:bg-brand-surface hover:border-brand-gold/50 backdrop-blur-sm transition-all duration-200 text-sm font-semibold group" href="#processo">
+<span>Ver como funciona</span>
+<svg class="w-4 h-4 text-brand-gold group-hover:translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+<!-- Indicador de Confiança Rápida com Badges Coloridos -->
+<div class="reveal-item mt-14 pt-8 border-t border-brand-surfaceBorder/40 flex flex-wrap items-center justify-center gap-y-3 gap-x-8 text-xs font-mono text-brand-muted uppercase tracking-wider">
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-gold shadow-[0_0_8px_rgba(229,169,60,0.8)]"></span>
+<span>Sem mensalidades escondidas</span>
+</span>
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-terracotta shadow-[0_0_8px_rgba(226,98,63,0.8)]"></span>
+<span>Atendimento direto com o desenvolvedor</span>
+</span>
+<span class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-emerald shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
+<span>Adaptado para celular</span>
+</span>
+</div>
+</div>
+</section>
+<!-- PROCESSO SECTION (Ritmo Dinâmico, Bordas Gradientes & Glow Interativo) -->
+<section class="py-24 px-6 md:px-12 bg-brand-surface relative border-b border-brand-surfaceBorder/70" id="processo">
+<!-- Glow ambiente de fundo -->
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-6xl mx-auto relative z-10">
+<!-- Header da seção -->
+<div class="max-w-2xl mb-16">
+<div class="reveal-item inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-terracotta font-semibold mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-terracotta"></span>
+<span>PROCESSO</span>
+</div>
+<h2 class="reveal-item font-serif text-3xl sm:text-4xl md:text-5xl text-brand-lightText font-normal leading-tight">
+            Como o projeto é conduzido, do início à publicação
+          </h2>
+</div>
+<!-- Grade com 4 etapas: alternância visual dourado (ímpares: 01, 03) e terracota/coral (pares: 02, 04) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- 01 Levantamento (Dourado - ímpar) -->
+<div class="reveal-item glow-card-dark bg-brand-dark p-7 rounded-xl border border-brand-surfaceBorder flex flex-col justify-between group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold to-brand-goldLight rounded-t-xl"></div>
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-mono text-3xl font-bold text-brand-gold group-hover:scale-110 transition-transform origin-left drop-shadow-[0_0_12px_rgba(229,169,60,0.3)]">01</span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-brand-gold/80 bg-brand-gold/10 px-2 py-0.5 rounded border border-brand-gold/20">Etapa 1</span>
+</div>
+<h3 class="font-serif text-2xl text-brand-lightText font-medium mb-3 group-hover:text-brand-gold transition-colors">
+                Levantamento
+              </h3>
+<p class="text-brand-muted text-sm leading-relaxed font-normal">
+                Conversa inicial pra entender o negócio, o público-alvo e o que o site precisa comunicar antes de qualquer linha ser escrita.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-brand-surfaceBorder/60 flex items-center text-xs font-mono text-brand-lightText/70 gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-gold shadow-[0_0_6px_rgba(229,169,60,0.6)]"></span>
+<span>Alinhamento de objetivo</span>
+</div>
+</div>
+<!-- 02 Construção (Terracota - par) -->
+<div class="reveal-item glow-card-dark bg-brand-dark p-7 rounded-xl border border-brand-surfaceBorder flex flex-col justify-between group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-terracotta to-brand-terracottaLight rounded-t-xl"></div>
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-mono text-3xl font-bold text-brand-terracotta group-hover:scale-110 transition-transform origin-left drop-shadow-[0_0_12px_rgba(226,98,63,0.3)]">02</span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-brand-terracotta/80 bg-brand-terracotta/10 px-2 py-0.5 rounded border border-brand-terracotta/20">Etapa 2</span>
+</div>
+<h3 class="font-serif text-2xl text-brand-lightText font-medium mb-3 group-hover:text-brand-terracotta transition-colors">
+                Construção
+              </h3>
+<p class="text-brand-muted text-sm leading-relaxed font-normal">
+                Estruturação do site com identidade visual própria, textos e imagens organizados de acordo com o que foi levantado na etapa anterior.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-brand-surfaceBorder/60 flex items-center text-xs font-mono text-brand-lightText/70 gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-terracotta shadow-[0_0_6px_rgba(226,98,63,0.6)]"></span>
+<span>Código &amp; design sob medida</span>
+</div>
+</div>
+<!-- 03 Revisão (Dourado - ímpar) -->
+<div class="reveal-item glow-card-dark bg-brand-dark p-7 rounded-xl border border-brand-surfaceBorder flex flex-col justify-between group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-gold to-brand-goldLight rounded-t-xl"></div>
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-mono text-3xl font-bold text-brand-gold group-hover:scale-110 transition-transform origin-left drop-shadow-[0_0_12px_rgba(229,169,60,0.3)]">03</span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-brand-gold/80 bg-brand-gold/10 px-2 py-0.5 rounded border border-brand-gold/20">Etapa 3</span>
+</div>
+<h3 class="font-serif text-2xl text-brand-lightText font-medium mb-3 group-hover:text-brand-gold transition-colors">
+                Revisão
+              </h3>
+<p class="text-brand-muted text-sm leading-relaxed font-normal">
+                Apresentação da versão inicial para ajustes de conteúdo, visual e funcionalidade, com quantas rodadas forem necessárias dentro do escopo combinado.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-brand-surfaceBorder/60 flex items-center text-xs font-mono text-brand-lightText/70 gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-gold shadow-[0_0_6px_rgba(229,169,60,0.6)]"></span>
+<span>Ajustes finos com você</span>
+</div>
+</div>
+<!-- 04 Publicação (Terracota - par) -->
+<div class="reveal-item glow-card-dark bg-brand-dark p-7 rounded-xl border border-brand-surfaceBorder flex flex-col justify-between group">
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-terracotta to-brand-emerald rounded-t-xl"></div>
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-mono text-3xl font-bold text-brand-terracotta group-hover:scale-110 transition-transform origin-left drop-shadow-[0_0_12px_rgba(226,98,63,0.3)]">04</span>
+<span class="font-mono text-[11px] uppercase tracking-wider text-brand-terracotta/80 bg-brand-terracotta/10 px-2 py-0.5 rounded border border-brand-terracotta/20">Etapa 4</span>
+</div>
+<h3 class="font-serif text-2xl text-brand-lightText font-medium mb-3 group-hover:text-brand-terracotta transition-colors">
+                Publicação
+              </h3>
+<p class="text-brand-muted text-sm leading-relaxed font-normal">
+                Site colocado no ar, com explicação clara de como fazer pequenas atualizações futuras ou solicitar suporte quando necessário.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-brand-surfaceBorder/60 flex items-center text-xs font-mono text-brand-lightText/70 gap-2">
+<span class="w-2 h-2 rounded-full bg-brand-emerald shadow-[0_0_6px_rgba(16,185,129,0.6)]"></span>
+<span>No ar com autonomia</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVIÇOS SECTION (Fundo Claro Refinado, Bordas Vivas & Contraste) -->
+<section class="py-24 px-6 md:px-12 bg-brand-cream text-brand-creamDarkText relative" id="servicos">
+<div class="max-w-6xl mx-auto">
+<!-- Header da seção -->
+<div class="max-w-2xl mb-16">
+<div class="reveal-item inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-terracotta font-bold mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-terracotta"></span>
+<span>SERVIÇOS</span>
+</div>
+<h2 class="reveal-item font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-tight text-brand-creamDarkText">
+            Criação de sites, do zero ou a partir do que já existe
+          </h2>
+</div>
+<!-- Grid com 2 Cards de Serviços -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Card 1 — Site institucional -->
+<div class="reveal-item glow-card-light bg-[#FCFAF6] border-2 border-brand-creamBorder rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-sm relative group overflow-hidden">
+<!-- Barra superior com gradiente quente -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold"></div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-mono text-xs font-bold px-3 py-1.5 rounded-md bg-brand-gold/15 text-brand-creamDarkText border border-brand-gold/40">
+                  NOVO PROJETO
+                </span>
+<span class="text-brand-gold font-serif italic text-sm font-semibold">Opção 01</span>
+</div>
+<h3 class="font-serif text-2xl sm:text-3xl font-bold mb-4 text-brand-creamDarkText">
+                Site institucional
+              </h3>
+<p class="text-brand-creamMutedText text-base leading-relaxed mb-8">
+                Construção de um site novo, do zero, pra apresentar o negócio, os serviços oferecidos e os canais de contato de forma clara e profissional.
+              </p>
+<!-- Lista de diferenciais estruturais com badges vívidos -->
+<div class="space-y-3.5 pt-6 border-t border-brand-creamBorder/70">
+<div class="flex items-center gap-3 text-sm font-semibold text-brand-creamDarkText">
+<span class="w-5 h-5 rounded-full bg-brand-gold/25 text-amber-800 flex items-center justify-center font-bold text-xs">✓</span>
+<span>Estrutura sob medida</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-semibold text-brand-creamDarkText">
+<span class="w-5 h-5 rounded-full bg-brand-gold/25 text-amber-800 flex items-center justify-center font-bold text-xs">✓</span>
+<span>Adaptado pro celular</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-semibold text-brand-creamDarkText">
+<span class="w-5 h-5 rounded-full bg-brand-gold/25 text-amber-800 flex items-center justify-center font-bold text-xs">✓</span>
+<span>Contato integrado</span>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6">
+<a class="inline-flex items-center gap-2 text-sm font-bold text-brand-creamDarkText group-hover:text-amber-700 transition-colors" href="https://wa.me/5528999770520" rel="noopener noreferrer" target="_blank">
+<span>Conversar sobre site institucional</span>
+<svg class="w-4 h-4 text-brand-gold group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Card 2 — Atualização de site existente -->
+<div class="reveal-item glow-card-light bg-[#FCFAF6] border-2 border-brand-creamBorder rounded-2xl p-8 sm:p-10 flex flex-col justify-between shadow-sm relative group overflow-hidden">
+<!-- Barra superior com gradiente terracota vibrante -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-brand-terracotta via-rose-400 to-brand-terracotta"></div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-mono text-xs font-bold px-3 py-1.5 rounded-md bg-brand-terracotta/15 text-brand-creamDarkText border border-brand-terracotta/40">
+                  RENOVAÇÃO
+                </span>
+<span class="text-brand-terracotta font-serif italic text-sm font-semibold">Opção 02</span>
+</div>
+<h3 class="font-serif text-2xl sm:text-3xl font-bold mb-4 text-brand-creamDarkText">
+                Atualização de site existente
+              </h3>
+<p class="text-brand-creamMutedText text-base leading-relaxed mb-8">
+                Para negócios que já têm site, mas ele está desatualizado, com visual antigo ou difícil de manter.
+              </p>
+<!-- Lista de diferenciais estruturais com badges vívidos -->
+<div class="space-y-3.5 pt-6 border-t border-brand-creamBorder/70">
+<div class="flex items-center gap-3 text-sm font-semibold text-brand-creamDarkText">
+<span class="w-5 h-5 rounded-full bg-brand-terracotta/25 text-rose-800 flex items-center justify-center font-bold text-xs">✓</span>
+<span>Revisão de conteúdo</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-semibold text-brand-creamDarkText">
+<span class="w-5 h-5 rounded-full bg-brand-terracotta/25 text-rose-800 flex items-center justify-center font-bold text-xs">✓</span>
+<span>Reconstrução do visual</span>
+</div>
+<div class="flex items-center gap-3 text-sm font-semibold text-brand-creamDarkText">
+<span class="w-5 h-5 rounded-full bg-brand-terracotta/25 text-rose-800 flex items-center justify-center font-bold text-xs">✓</span>
+<span>Correção de dados desatualizados</span>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6">
+<a class="inline-flex items-center gap-2 text-sm font-bold text-brand-creamDarkText group-hover:text-brand-terracotta transition-colors" href="https://wa.me/5528999770520" rel="noopener noreferrer" target="_blank">
+<span>Conversar sobre atualizar meu site</span>
+<svg class="w-4 h-4 text-brand-terracotta group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EXEMPLOS SECTION (Modelos Navegáveis Interativos com Chrome Modernizado) -->
+<section class="py-24 px-6 md:px-12 bg-brand-dark relative border-b border-brand-surfaceBorder/70" id="exemplos">
+<div class="max-w-6xl mx-auto">
+<!-- Header da seção -->
+<div class="max-w-3xl mb-12">
+<div class="reveal-item inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-gold font-semibold mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+<span>EXEMPLOS</span>
+</div>
+<h2 class="reveal-item font-serif text-3xl sm:text-4xl md:text-5xl text-brand-lightText font-normal leading-tight mb-4">
+            Um exemplo real do que sai do forno
+          </h2>
+<p class="reveal-item text-brand-muted text-base sm:text-lg">
+            Isso não é imagem — é o site rodando de verdade. Explore como se fosse visitante.
+          </p>
+</div>
+<!-- Seletor de Modelo Interativo (Abas) -->
+<div class="reveal-item flex flex-wrap gap-3 mb-8">
+<button class="mockup-tab active px-5 py-2.5 rounded-lg text-xs font-mono tracking-wider border border-brand-surfaceBorder bg-brand-surface text-brand-lightText transition-all flex items-center gap-2" id="btn-model-odonto" onclick="switchExample('odonto')">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>MODELO PARA CLÍNICA ODONTOLÓGICA</span>
+</button>
+<button class="mockup-tab px-5 py-2.5 rounded-lg text-xs font-mono tracking-wider border border-brand-surfaceBorder bg-brand-surface/40 text-brand-muted hover:text-brand-lightText transition-all flex items-center gap-2" id="btn-model-barbearia" onclick="switchExample('barbearia')">
+<span class="w-2 h-2 rounded-full bg-brand-gold"></span>
+<span>MODELO PARA BARBEARIA</span>
+</button>
+</div>
+<!-- Frame do Navegador / Sandbox Interativo -->
+<div class="reveal-item rounded-xl border border-brand-surfaceBorder bg-brand-surface overflow-hidden shadow-2xl">
+<!-- Browser Chrome Bar -->
+<div class="bg-brand-darker px-4 py-3 border-b border-brand-surfaceBorder/80 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-[#E2623F]"></div>
+<div class="w-3 h-3 rounded-full bg-[#E5A93C]"></div>
+<div class="w-3 h-3 rounded-full bg-[#10B981]"></div>
+</div>
+<!-- Browser URL bar -->
+<div class="font-mono text-xs text-brand-muted bg-brand-dark/90 px-6 py-1.5 rounded-md border border-brand-surfaceBorder/60 flex items-center gap-2 max-w-sm w-full justify-center" id="demo-url-bar">
+<svg class="w-3.5 h-3.5 text-brand-gold" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-brand-lightText/80" id="demo-url-text">exemplo-apice.com/modelo-clinica-odontologica</span>
+</div>
+<div class="text-[11px] font-mono text-brand-gold hidden sm:flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+<span>Navegação ao vivo</span>
+</div>
+</div>
+<!-- Sandbox Content Area -->
+<div class="p-2 sm:p-6 bg-brand-surface/30">
+<!-- DEMO 1: MODELO PARA CLÍNICA ODONTOLÓGICA -->
+<div class="bg-[#F8FAF9] text-[#1E2E28] rounded-lg border border-slate-200 overflow-hidden shadow-sm transition-all duration-300" id="demo-odonto">
+<!-- Header Odonto -->
+<div class="px-6 py-4 bg-white border-b border-emerald-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-[#10B981] text-white flex items-center justify-center font-serif font-bold text-sm shadow-sm">O</div>
+<span class="font-serif font-semibold text-lg tracking-tight text-[#1E2E28]">Clínica Odontológica Integrada</span>
+</div>
+<div class="hidden sm:flex gap-4 text-xs font-medium text-slate-600">
+<span>Tratamentos</span>
+<span>Corpo Clínico</span>
+<span>Localização</span>
+</div>
+<button class="bg-[#10B981] hover:bg-emerald-600 text-white text-xs px-3.5 py-1.5 rounded font-medium transition-colors shadow-sm" onclick="alert('Simulação de agendamento: Em seu site real, este botão abrirá direto a conversa de WhatsApp de sua clínica!')">
+                  Agendar Consulta
+                </button>
+</div>
+<!-- Hero Odonto -->
+<div class="p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gradient-to-br from-[#F4F9F6] to-[#E5F5ED]">
+<div>
+<span class="inline-block text-[10px] font-mono uppercase tracking-widest text-[#059669] font-bold bg-emerald-100 px-2.5 py-0.5 rounded mb-3 border border-emerald-200">
+                    Atendimento Humanizado no Centro
+                  </span>
+<h4 class="font-serif text-2xl sm:text-3xl text-[#1E2E28] font-bold leading-snug mb-3">
+                    Cuidamos do seu sorriso com atenção individual e tecnologia.
+                  </h4>
+<p class="text-sm text-slate-600 leading-relaxed mb-6">
+                    Implantes, ortodontia e estética dental com profissionais dedicados ao seu conforto do início ao fim.
+                  </p>
+<div class="flex items-center gap-3">
+<button class="bg-[#10B981] text-white text-xs font-semibold px-4 py-2.5 rounded shadow hover:bg-emerald-600 transition-colors" onclick="alert('Ação funcional: Conecta ao WhatsApp da recepção.')">
+                      Tirar dúvidas no WhatsApp
+                    </button>
+<span class="text-xs text-slate-500 font-mono">Resposta em até 15 min</span>
+</div>
+</div>
+<!-- Mini cartões de tratamentos odonto -->
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white p-4 rounded border border-emerald-100 shadow-sm hover:border-emerald-300 transition-colors">
+<div class="text-emerald-800 font-serif font-bold text-sm mb-1">Clareamento</div>
+<div class="text-[11px] text-slate-500">Técnicas a laser e caseiras supervisionadas.</div>
+</div>
+<div class="bg-white p-4 rounded border border-emerald-100 shadow-sm hover:border-emerald-300 transition-colors">
+<div class="text-emerald-800 font-serif font-bold text-sm mb-1">Ortodontia</div>
+<div class="text-[11px] text-slate-500">Alinhadores invisíveis e aparelhos estéticos.</div>
+</div>
+<div class="bg-white p-4 rounded border border-emerald-100 shadow-sm hover:border-emerald-300 transition-colors">
+<div class="text-emerald-800 font-serif font-bold text-sm mb-1">Implantes</div>
+<div class="text-[11px] text-slate-500">Recuperação funcional com alta previsibilidade.</div>
+</div>
+<div class="bg-white p-4 rounded border border-emerald-100 shadow-sm hover:border-emerald-300 transition-colors">
+<div class="text-emerald-800 font-serif font-bold text-sm mb-1">Prevenção</div>
+<div class="text-[11px] text-slate-500">Check-up preventivo para toda a família.</div>
+</div>
+</div>
+</div>
+<!-- Footer Odonto -->
+<div class="px-6 py-3 bg-white border-t border-emerald-100 flex flex-wrap justify-between items-center text-xs text-slate-500 font-mono">
+<span>Rua Principal, 120 · Sala 402</span>
+<span>Seg a Sex: 08h às 19h</span>
+</div>
+</div>
+<!-- DEMO 2: MODELO PARA BARBEARIA -->
+<div class="hidden bg-[#1C1815] text-[#EDE4D3] rounded-lg border border-[#382E28] overflow-hidden shadow-sm transition-all duration-300" id="demo-barbearia">
+<!-- Header Barbearia -->
+<div class="px-6 py-4 bg-[#14110E] border-b border-[#382E28] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded bg-[#E5A93C] text-[#14110E] flex items-center justify-center font-serif font-black text-sm">B</div>
+<span class="font-serif font-semibold text-lg tracking-wider text-[#EDE4D3] uppercase">Barbearia Tradicional</span>
+</div>
+<div class="hidden sm:flex gap-4 text-xs font-mono text-[#A89885]">
+<span>Cortes</span>
+<span>Barba &amp; Toalha</span>
+<span>Localização</span>
+</div>
+<button class="bg-[#E5A93C] hover:bg-[#d4982f] text-[#14110E] text-xs px-3.5 py-1.5 rounded font-bold transition-colors" onclick="alert('Simulação de agendamento: Redireciona para o link de horário ou WhatsApp do barbeiro!')">
+                  Marcar Horário
+                </button>
+</div>
+<!-- Hero Barbearia -->
+<div class="p-6 sm:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-gradient-to-br from-[#1C1815] to-[#25201C]">
+<div>
+<span class="inline-block text-[10px] font-mono uppercase tracking-widest text-[#E5A93C] font-semibold bg-[#E5A93C]/15 px-2.5 py-0.5 rounded mb-3 border border-[#E5A93C]/30">
+                    Corte Clássico &amp; Barba na Navalha
+                  </span>
+<h4 class="font-serif text-2xl sm:text-3xl text-[#EDE4D3] font-bold leading-snug mb-3">
+                    Estilo impecável, café passado e pontualidade.
+                  </h4>
+<p class="text-sm text-[#A89885] leading-relaxed mb-6">
+                    Sem fila de espera desnecessária. Agende o seu horário e tenha um momento de cuidado com toalha quente e acabamento de precisão.
+                  </p>
+<div class="flex items-center gap-3">
+<button class="bg-[#E5A93C] text-[#14110E] text-xs font-bold px-4 py-2.5 rounded shadow-sm hover:opacity-90" onclick="alert('Ação funcional: Chama no WhatsApp da barbearia!')">
+                      Agendar pelo WhatsApp
+                    </button>
+<span class="text-xs text-[#A89885] font-mono">Av. Central, 450</span>
+</div>
+</div>
+<!-- Tabela de serviços barbearia -->
+<div class="bg-[#14110E] p-5 rounded border border-[#382E28] space-y-3">
+<div class="flex justify-between items-center pb-2 border-b border-[#382E28]/60 text-sm">
+<span class="font-serif">Corte Cabelo Social / Fade</span>
+<span class="font-mono text-[#E5A93C]">R$ 45</span>
+</div>
+<div class="flex justify-between items-center pb-2 border-b border-[#382E28]/60 text-sm">
+<span class="font-serif">Barba Terapia com Toalha Quente</span>
+<span class="font-mono text-[#E5A93C]">R$ 40</span>
+</div>
+<div class="flex justify-between items-center pb-2 border-b border-[#382E28]/60 text-sm">
+<span class="font-serif">Combo Cabelo + Barba</span>
+<span class="font-mono text-[#E5A93C]">R$ 75</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="font-serif">Acabamento &amp; Sobrancelha</span>
+<span class="font-mono text-[#E5A93C]">R$ 20</span>
+</div>
+</div>
+</div>
+<!-- Footer Barbearia -->
+<div class="px-6 py-3 bg-[#14110E] border-t border-[#382E28] flex flex-wrap justify-between items-center text-xs text-[#A89885] font-mono">
+<span>Terça a Sábado · 09h às 20h</span>
+<span>Cerveja gelada &amp; Estacionamento</span>
+</div>
+</div>
+</div>
+<!-- Legenda oficial -->
+<div class="px-6 py-3 bg-brand-surfaceBorder/40 border-t border-brand-surfaceBorder/60 flex items-center justify-between text-xs font-mono text-brand-muted">
+<span id="demo-legend">Legenda: Modelo para clínica odontológica</span>
+<span class="text-brand-gold font-medium">Totalmente responsivo &amp; adaptado</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SOBRE SECTION (Fundo Claro Refinado, Sutil e Equilibrado) -->
+<section class="py-20 px-6 md:px-12 bg-brand-creamAlt text-brand-creamDarkText border-b border-brand-creamBorder" id="sobre">
+<div class="max-w-3xl mx-auto">
+<!-- Header sutil -->
+<div class="font-mono text-xs uppercase tracking-widest text-brand-terracotta font-bold mb-2 flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-terracotta"></span>
+<span>SOBRE</span>
+</div>
+<h2 class="font-serif text-2xl sm:text-3xl font-medium mb-6 text-brand-creamDarkText">
+          Uma iniciativa individual
+        </h2>
+<!-- Texto exato mantido -->
+<div class="p-6 sm:p-8 bg-white/80 backdrop-blur-sm rounded-xl border border-brand-creamBorder/90 shadow-sm">
+<p class="text-brand-creamDarkText text-lg sm:text-xl font-normal leading-relaxed">
+            A Ápice é uma iniciativa individual que existe pra ajudar negócios a entrar no digital. Sem bot, sem central de atendimento — você fala direto com quem resolve, do primeiro contato até o site no ar.
+          </p>
+<div class="mt-6 pt-4 border-t border-brand-creamBorder/60 flex items-center gap-3 text-sm text-brand-creamMutedText font-mono">
+<span class="w-2 h-2 rounded-full bg-brand-terracotta"></span>
+<span>Heitor Marchiori · Responsável pelo projeto</span>
+</div>
+</div>
+</div>
+</section>
+<!-- DÚVIDAS FREQUENTES (Acordeão Dinâmico com Motion Fluido) -->
+<section class="py-24 px-6 md:px-12 bg-brand-surface relative border-b border-brand-surfaceBorder/70" id="duvidas">
+<div class="max-w-4xl mx-auto">
+<!-- Header da seção -->
+<div class="max-w-2xl mb-14">
+<div class="reveal-item inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-gold font-semibold mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+<span>DÚVIDAS FREQUENTES</span>
+</div>
+<h2 class="reveal-item font-serif text-3xl sm:text-4xl md:text-5xl text-brand-lightText font-normal leading-tight">
+            Perguntas comuns antes de começar
+          </h2>
+</div>
+<!-- Accordion Container com as 4 perguntas e respostas exatas -->
+<div class="space-y-4">
+<!-- FAQ Item 1 (Ímpar - Dourado) -->
+<div class="reveal-item faq-item active bg-brand-dark border border-brand-surfaceBorder rounded-xl p-6 transition-all duration-300">
+<button aria-expanded="true" class="w-full flex items-center justify-between text-left gap-4 focus:outline-none cursor-pointer" onclick="toggleFaq(this)">
+<span class="font-serif text-lg sm:text-xl text-brand-lightText font-medium">
+                1. Quem vai cuidar do projeto do início ao fim?
+              </span>
+<span class="faq-icon text-brand-gold text-2xl font-light transform transition-transform duration-300">
+                ↓
+              </span>
+</button>
+<div class="faq-answer mt-3">
+<p class="text-brand-muted text-sm sm:text-base leading-relaxed pt-3 border-t border-brand-surfaceBorder/60">
+                Vale saber se você vai falar com a mesma pessoa durante todo o processo. Na Ápice é sempre a mesma pessoa, do primeiro contato até o site no ar.
+              </p>
+</div>
+</div>
+<!-- FAQ Item 2 (Par - Terracota) -->
+<div class="reveal-item faq-item bg-brand-dark border border-brand-surfaceBorder rounded-xl p-6 transition-all duration-300">
+<button aria-expanded="false" class="w-full flex items-center justify-between text-left gap-4 focus:outline-none cursor-pointer" onclick="toggleFaq(this)">
+<span class="font-serif text-lg sm:text-xl text-brand-lightText font-medium">
+                2. Como funciona depois que o site está no ar?
+              </span>
+<span class="faq-icon text-brand-muted text-2xl font-light transform transition-transform duration-300">
+                ↓
+              </span>
+</button>
+<div class="faq-answer">
+<p class="text-brand-muted text-sm sm:text-base leading-relaxed pt-3 border-t border-brand-surfaceBorder/60">
+                Pequenas mudanças de texto ou foto no futuro têm custo? Isso é explicado com clareza já na entrega do projeto.
+              </p>
+</div>
+</div>
+<!-- FAQ Item 3 (Ímpar - Dourado) -->
+<div class="reveal-item faq-item bg-brand-dark border border-brand-surfaceBorder rounded-xl p-6 transition-all duration-300">
+<button aria-expanded="false" class="w-full flex items-center justify-between text-left gap-4 focus:outline-none cursor-pointer" onclick="toggleFaq(this)">
+<span class="font-serif text-lg sm:text-xl text-brand-lightText font-medium">
+                3. Quanto tempo leva, e o que pode atrasar?
+              </span>
+<span class="faq-icon text-brand-muted text-2xl font-light transform transition-transform duration-300">
+                ↓
+              </span>
+</button>
+<div class="faq-answer">
+<p class="text-brand-muted text-sm sm:text-base leading-relaxed pt-3 border-t border-brand-surfaceBorder/60">
+                Um prazo claro, e entender o que depende de você (enviar textos e fotos) ajuda a evitar expectativa errada.
+              </p>
+</div>
+</div>
+<!-- FAQ Item 4 (Par - Terracota) -->
+<div class="reveal-item faq-item bg-brand-dark border border-brand-surfaceBorder rounded-xl p-6 transition-all duration-300">
+<button aria-expanded="false" class="w-full flex items-center justify-between text-left gap-4 focus:outline-none cursor-pointer" onclick="toggleFaq(this)">
+<span class="font-serif text-lg sm:text-xl text-brand-lightText font-medium">
+                4. O que está incluso no valor combinado?
+              </span>
+<span class="faq-icon text-brand-muted text-2xl font-light transform transition-transform duration-300">
+                ↓
+              </span>
+</button>
+<div class="faq-answer">
+<p class="text-brand-muted text-sm sm:text-base leading-relaxed pt-3 border-t border-brand-surfaceBorder/60">
+                Formulário de contato, adaptação pro celular, ajustes de revisão — vale confirmar o que já está no preço.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTATO SECTION (Call to Action principal com Aurora Glow e Shimmer) -->
+<section class="py-28 px-6 md:px-12 bg-brand-dark relative text-center aurora-hero overflow-hidden" id="contato">
+<!-- Topographic line accents -->
+<div class="max-w-3xl mx-auto relative z-10">
+<div class="reveal-item inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-brand-gold font-semibold mb-4 px-3 py-1 rounded-full bg-brand-gold/10 border border-brand-gold/25">
+<span class="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
+<span>VAMOS CONVERSAR</span>
+</div>
+<!-- Título exato mantido -->
+<h2 class="reveal-item font-serif text-3xl sm:text-5xl md:text-6xl text-brand-lightText font-normal mb-8 leading-tight">
+          Vamos colocar seu negócio no digital?
+        </h2>
+<p class="reveal-item text-brand-muted text-base sm:text-lg mb-10 max-w-xl mx-auto">
+          Mande uma mensagem direta para tirar dúvidas, saber prazos ou pedir um orçamento sem qualquer compromisso.
+        </p>
+<!-- Botão Grande com Shimmer e Gradiente -->
+<div class="reveal-item mb-8">
+<a class="btn-shimmer inline-flex items-center justify-center gap-3.5 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold hover:from-brand-goldHover hover:to-brand-gold text-brand-darker font-extrabold text-lg sm:text-xl px-10 py-5 rounded-xl transition-all duration-300 shadow-2xl shadow-brand-gold/25 hover:shadow-brand-gold/40 hover:scale-[1.02] active:scale-100 w-full sm:w-auto" href="https://wa.me/5528999770520" rel="noopener noreferrer" target="_blank">
+<span>Quero marcar presença na internet</span>
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.588-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.698.077-2.18-.538-1.77-.736-2.91-2.531-2.998-2.648-.088-.116-.717-.954-.717-1.817s.45-1.286.61-1.46c.162-.175.353-.219.47-.219.117 0 .235.001.338.006.107.005.252-.041.394.3.147.352.502 1.226.546 1.314.044.088.073.191.015.307-.058.117-.088.19-.176.293-.088.102-.186.229-.265.308-.088.087-.18.182-.078.357.103.175.457.754.981 1.221.674.601 1.243.787 1.419.874.176.088.279.073.382-.044.103-.117.44-.513.558-.689.117-.175.235-.146.397-.087.161.058 1.028.484 1.205.572.176.088.293.132.337.205.044.073.044.425-.1 1.042z"></path>
+</svg>
+</a>
+</div>
+<!-- Pequeno e sem destaque conforme solicitado: (28) 99977-0520 · HEITOR -->
+<div class="reveal-item text-xs font-mono text-brand-muted tracking-widest">
+          (28) 99977-0520 · HEITOR
+        </div>
+</div>
+</section>
+</main>
+<!-- RODAPÉ -->
+<footer class="bg-brand-darker border-t border-brand-surfaceBorder/80 py-12 px-6 md:px-12 text-sm text-brand-muted">
+<div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+<!-- Texto do rodapé exato -->
+<div class="flex items-center gap-3">
+<span class="font-serif font-bold text-brand-lightText">Ápice</span>
+<span>— criação de sites profissionais.</span>
+</div>
+<!-- E-mail e voltar ao topo -->
+<div class="flex items-center gap-6 text-xs font-mono">
+<a class="hover:text-brand-gold transition-colors" href="mailto:marchioriheitor6@gmail.com">
+          marchioriheitor6@gmail.com
+        </a>
+<span class="text-brand-surfaceBorder">·</span>
+<a class="hover:text-brand-gold transition-colors flex items-center gap-1.5" href="#">
+<span>voltar ao topo</span>
+<span>↑</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- SCRIPT DE MOVIMENTO & INTERATIVIDADE -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Scroll Reveal com Stagger e desfoque suave
+      const revealElements = document.querySelectorAll('.reveal-item');
+      
+      const observer = new IntersectionObserver((entries) => {
+        let delayIndex = 0;
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            setTimeout(() => {
+              el.classList.add('is-revealed');
+            }, delayIndex * 90);
+            delayIndex++;
+            observer.unobserve(el);
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+
+      // 2. Parallax sutil no hero
+      const heroParallax = document.getElementById('hero-parallax');
+      const topoBg = document.getElementById('topo-bg');
+      
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        if (heroParallax && scrolled < 900) {
+          heroParallax.style.transform = `translateY(${scrolled * 0.10}px)`;
+        }
+        if (topoBg) {
+          topoBg.style.transform = `translateY(${scrolled * 0.04}px)`;
+        }
+
+        // 3. Menu: compacta com backdrop-blur suave
+        const navbar = document.getElementById('navbar');
+        if (scrolled > 30) {
+          navbar.classList.add('bg-brand-dark/95', 'py-3', 'shadow-xl', 'border-brand-surfaceBorder/80');
+          navbar.classList.remove('py-4', 'bg-brand-dark/75');
+        } else {
+          navbar.classList.remove('bg-brand-dark/95', 'py-3', 'shadow-xl', 'border-brand-surfaceBorder/80');
+          navbar.classList.add('py-4', 'bg-brand-dark/75');
+        }
+      }, { passive: true });
+
+      // 4. Cursor Spotlight / Iluminação sutil no Hero
+      const heroSection = document.getElementById('hero-section');
+      const spotlightGlow = document.getElementById('spotlight-glow');
+      
+      if (heroSection && spotlightGlow) {
+        heroSection.addEventListener('mousemove', (e) => {
+          const rect = heroSection.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          spotlightGlow.style.left = `${x}px`;
+          spotlightGlow.style.top = `${y}px`;
+          spotlightGlow.style.opacity = '1';
+        });
+
+        heroSection.addEventListener('mouseleave', () => {
+          spotlightGlow.style.opacity = '0';
+        });
+      }
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          mobileMenu.classList.toggle('flex');
+        });
+        
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+          });
+        });
+      }
+    });
+
+    // 5. Toggle Accordion de Dúvidas Frequentes
+    function toggleFaq(button) {
+      const parent = button.closest('.faq-item');
+      const isAlreadyActive = parent.classList.contains('active');
+      
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        const btn = item.querySelector('button');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isAlreadyActive) {
+        parent.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    // 6. Troca de Abas dos Modelos Navegáveis (Exemplos)
+    function switchExample(type) {
+      const demoOdonto = document.getElementById('demo-odonto');
+      const demoBarbearia = document.getElementById('demo-barbearia');
+      const btnOdonto = document.getElementById('btn-model-odonto');
+      const btnBarbearia = document.getElementById('btn-model-barbearia');
+      const urlText = document.getElementById('demo-url-text');
+      const legend = document.getElementById('demo-legend');
+
+      if (type === 'odonto') {
+        demoOdonto.classList.remove('hidden');
+        demoBarbearia.classList.add('hidden');
+        
+        btnOdonto.classList.add('active');
+        btnOdonto.classList.remove('bg-brand-surface/40', 'text-brand-muted');
+        btnBarbearia.classList.remove('active');
+        btnBarbearia.classList.add('bg-brand-surface/40', 'text-brand-muted');
+
+        urlText.textContent = 'exemplo-apice.com/modelo-clinica-odontologica';
+        legend.textContent = 'Legenda: Modelo para clínica odontológica';
+      } else {
+        demoOdonto.classList.add('hidden');
+        demoBarbearia.classList.remove('hidden');
+        
+        btnBarbearia.classList.add('active');
+        btnBarbearia.classList.remove('bg-brand-surface/40', 'text-brand-muted');
+        btnOdonto.classList.remove('active');
+        btnOdonto.classList.add('bg-brand-surface/40', 'text-brand-muted');
+
+        urlText.textContent = 'exemplo-apice.com/modelo-barbearia';
+        legend.textContent = 'Legenda: Modelo para barbearia';
+      }
+    }
+  </script>
+</body></html>
